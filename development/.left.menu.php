@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Сайт-визитка", 
+		"/development/online-business-card/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Интернет-магазин", 
+		"/development/online-store/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Корпоративный сайт", 
+		"/development/corporate-website/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Лендинг", 
+		"/development/landing-page/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

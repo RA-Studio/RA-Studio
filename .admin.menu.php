@@ -1,0 +1,95 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О нас", 
+		"/about-us/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Разработка сайтов", 
+		"/development/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Веб-дизайн", 
+		"/web-design/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Продвижение", 
+		"/promotion/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контекстная реклама", 
+		"/contextual-advertising/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Управление репутацией", 
+		"/reputation-management/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Портфолио", 
+		"/portfolio/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Блог", 
+		"/blog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Политика конфиденциальности", 
+		"/privacy-policy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доска проектов", 
+		"/project-board/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Кейсы", 
+		"/cases/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"/services/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
