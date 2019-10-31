@@ -17,7 +17,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                 <div class="main-banner-left-items__item">Уникальные решения</div>
                             </div>
                             <div class="main-banner-left__btn-wrap" style="display: inline-block;" data-aos="zoom-in" data-aos-delay="1000">
-                                <a class="main-banner-left__btn" data-fancybox="" data-options="{&quot;src&quot;: &quot;#SendForm&quot;, &quot;touch&quot;: false}" href="javascript:;" >Узнать подробнее</a>
+                                <a data-nolink class="main-banner-left__btn fancybox-btn-init" title="Пишите, мы ответим" data-fancybox="" data-options="{&quot;src&quot;: &quot;#SendForm&quot;, &quot;touch&quot;: false}" href="javascript:;" >Узнать подробнее</a>
                             </div>
                         </div>
                         <div class="main-banner-right" id="lottie"></div>
@@ -70,9 +70,12 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                     </div>
                     <div class="main-about__subtitle">Сотрудничаем и проводим семинары с 1С-Битрикс</div>
                     <div class="main-about-partners">
-                        <div class="main-about-partners-item"><img src="assets/images/partner1.png" alt=""></div>
-                        <div class="main-about-partners-item"><img src="assets/images/partner2.png" alt=""><img src="assets/images/partner3.png" alt=""></div>
-                        <div class="main-about-partners-item"><img src="assets/images/partner4.png" alt=""></div>
+                        <div class="main-about-partners-item"><img src="/local/templates/rastudio/assets/images/partner1.png" alt=""></div>
+                        <div class="main-about-partners-item">
+                            <img src="/local/templates/rastudio/assets/images/partner2.png" alt="">
+                            <img src="/local/templates/rastudio/assets/images/partner3.png" alt="">
+                        </div>
+                        <div class="main-about-partners-item"><img src="/local/templates/rastudio/assets/images/partner4.png" alt=""></div>
                     </div>
                 </div>
                 <div class="main-ways">
@@ -85,11 +88,11 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M3.5 28.5H2.5V29.5H3.5V28.5ZM41 28.5V29.5H42V28.5H41ZM41 1.5H42C42 0.947715 41.5523 0.5 41 0.5V1.5ZM3.5 1.5V0.5C2.94772 0.5 2.5 0.947715 2.5 1.5L3.5 1.5ZM3.5 29.5H41V27.5H3.5V29.5ZM42 28.5V1.5H40V28.5H42ZM41 0.5H3.5V2.5H41V0.5ZM2.5 1.5V28.5H4.5V1.5H2.5ZM0 35.5H44V33.5H0V35.5Z" fill="white"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <div class="main-ways-item-top-left-info__title">Сайты</div>
+                                        <h2 class="main-ways-item-top-left-info__title">Сайты</h2>
                                         <div class="main-ways-item-top-left-info-items">
-                                            <div class="main-ways-item-top-left-info-items__item">Корпоративные сайты</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Интернет-магазины</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Промо-сайты</div>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Корпоративные сайты</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Интернет-магазины</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Промо-сайты</h3>
                                         </div>
                                     </div>
                                 </div><svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,11 +126,11 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M14 10V39H1V10M14 10L7.5 2L1 10M14 10H1M35 13.5V5H22V39H35V30.5M35 13.5H30M35 13.5V22M35 22H27.5M35 22V30.5M35 30.5H30" stroke="white" stroke-width="2"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <div class="main-ways-item-top-left-info__title">Дизайн</div>
+                                        <h2 class="main-ways-item-top-left-info__title">Дизайн</h2>
                                         <div class="main-ways-item-top-left-info-items">
-                                            <div class="main-ways-item-top-left-info-items__item">UX / UI design</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Прототипирование</div>
-                                            <div class="main-ways-item-top-left-info-items__item">User research</div>
+                                            <h3 class="main-ways-item-top-left-info-items__item">UX / UI design</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Прототипирование</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">User research</h3>
                                         </div>
                                     </div>
                                 </div><svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,11 +165,11 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M32.2715 26.468C30.7835 26.468 29.4515 26.048 28.2755 25.208C27.0995 24.368 26.5115 23.12 26.5115 21.464C26.5115 20.312 26.7875 19.352 27.3395 18.584C27.9155 17.792 28.7195 17.216 29.7515 16.856C30.8075 16.472 31.8755 16.208 32.9555 16.064C34.0355 15.92 35.2835 15.848 36.6995 15.848H38.3915V15.092C38.3915 11.972 36.8075 10.412 33.6395 10.412C31.6715 10.412 30.0035 11.072 28.6355 12.392L27.5555 11.096C29.1395 9.55996 31.2275 8.79196 33.8195 8.79196C35.7635 8.79196 37.3235 9.30796 38.4995 10.34C39.6755 11.372 40.2635 12.884 40.2635 14.876V22.22C40.2635 23.732 40.3595 24.992 40.5515 26H38.7875C38.5955 24.848 38.4995 23.816 38.4995 22.904H38.4275C37.1075 25.28 35.0555 26.468 32.2715 26.468ZM32.7395 24.848C34.5635 24.848 35.9555 24.26 36.9155 23.084C37.8995 21.884 38.3915 20.444 38.3915 18.764V17.396H37.1315C31.3955 17.396 28.5275 18.716 28.5275 21.356C28.5275 22.556 28.9355 23.444 29.7515 24.02C30.5915 24.572 31.5875 24.848 32.7395 24.848Z" fill="white"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <div class="main-ways-item-top-left-info__title">Брендинг</div>
+                                        <h2 class="main-ways-item-top-left-info__title">Брендинг</h2>
                                         <div class="main-ways-item-top-left-info-items">
-                                            <div class="main-ways-item-top-left-info-items__item">Логотипы</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Фирменный стиль</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Рекламные иллюстрации</div>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Логотипы</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Фирменный стиль</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Рекламные иллюстрации</h3>
                                         </div>
                                     </div>
                                 </div><svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,11 +205,11 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M37.237 16.877C39.0798 20.0688 39.8909 23.5707 39.775 26.9998L20.0001 26.9998L20.0001 7.389C26.8335 7.11339 33.5821 10.5466 37.237 16.877Z" stroke="white" stroke-width="2"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <div class="main-ways-item-top-left-info__title">Аналитика</div>
+                                        <h2 class="main-ways-item-top-left-info__title">Аналитика</h2>
                                         <div class="main-ways-item-top-left-info-items">
-                                            <div class="main-ways-item-top-left-info-items__item">Работа с конверсией</div>
-                                            <div class="main-ways-item-top-left-info-items__item">SEO-оптимизация</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Управление трафиком</div>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Работа с конверсией</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">SEO-оптимизация</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Управление трафиком</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -243,11 +246,11 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M15.625 23.9206C25.375 25.7302 31.4688 26.9365 40 31.1587V1C31.4688 4.61905 26.5938 7.63492 15.625 8.2381M15.625 23.9206V8.2381M15.625 23.9206V39H8.92188V23.9206M15.625 23.9206H8.92188M15.625 8.2381H5.26562V11H4C2.34315 11 1 12.3431 1 14V18.254C1 19.9108 2.34315 21.254 4 21.254H5.26562V23.9206H8.92188" stroke="white" stroke-width="2" stroke-linejoin="round"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <div class="main-ways-item-top-left-info__title">Управление репутацией</div>
+                                        <h2 class="main-ways-item-top-left-info__title">Управление репутацией</h2>
                                         <div class="main-ways-item-top-left-info-items">
-                                            <div class="main-ways-item-top-left-info-items__item">Устранение негатива</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Формирование поисковой брендовой выдачи</div>
-                                            <div class="main-ways-item-top-left-info-items__item">Формирование спроса</div>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Устранение негатива</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Формирование поисковой брендовой выдачи</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Формирование спроса</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -277,6 +280,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                         </div>
                     </div>
                 </div>
+                <?/*
                 <div class="main-clients">
                     <div class="main-clients__subtitle">Наши клиенты</div>
                     <h2 class="main-clients__title">От крупных застройщиков до малого бизнеса</h2>
@@ -298,6 +302,77 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                         <div class="main-clients-items-item"><img src="assets/images/client15.png" alt=""></div>
                     </div>
                 </div>
+                */?>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:news.list",
+                    "clients",
+                    array(
+                        "COMPONENT_TEMPLATE" => "clients",
+                        "IBLOCK_TYPE" => "content",
+                        "IBLOCK_ID" => "3",
+                        "NEWS_COUNT" => "200",
+                        "SORT_BY1" => "SORT",
+                        "SORT_ORDER1" => "ASC",
+                        "SORT_BY2" => "SORT",
+                        "SORT_ORDER2" => "ASC",
+                        "FILTER_NAME" => "",
+                        "FIELD_CODE" => array(
+                            0 => "",
+                            1 => "",
+                        ),
+                        "PROPERTY_CODE" => array(
+                            0 => "UF_CASE_LINK",
+                            1 => "UF_LINK",
+                            2 => "",
+                        ),
+                        "CHECK_DATES" => "Y",
+                        "DETAIL_URL" => "",
+                        "AJAX_MODE" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "Y",
+                        "AJAX_OPTION_HISTORY" => "N",
+                        "AJAX_OPTION_ADDITIONAL" => "",
+                        "CACHE_TYPE" => "A",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_FILTER" => "N",
+                        "CACHE_GROUPS" => "Y",
+                        "PREVIEW_TRUNCATE_LEN" => "",
+                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                        "SET_TITLE" => "N",
+                        "SET_BROWSER_TITLE" => "N",
+                        "SET_META_KEYWORDS" => "N",
+                        "SET_META_DESCRIPTION" => "N",
+                        "SET_LAST_MODIFIED" => "N",
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                        "PARENT_SECTION" => "",
+                        "PARENT_SECTION_CODE" => "",
+                        "INCLUDE_SUBSECTIONS" => "N",
+                        "STRICT_SECTION_CHECK" => "N",
+                        "DISPLAY_DATE" => "Y",
+                        "DISPLAY_NAME" => "Y",
+                        "DISPLAY_PICTURE" => "Y",
+                        "DISPLAY_PREVIEW_TEXT" => "Y",
+                        "COMPOSITE_FRAME_MODE" => "A",
+                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                        "PAGER_TEMPLATE" => ".default",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "DISPLAY_BOTTOM_PAGER" => "N",
+                        "PAGER_TITLE" => "Новости",
+                        "PAGER_SHOW_ALWAYS" => "N",
+                        "PAGER_DESC_NUMBERING" => "N",
+                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                        "PAGER_SHOW_ALL" => "N",
+                        "PAGER_BASE_LINK_ENABLE" => "N",
+                        "SET_STATUS_404" => "Y",
+                        "SHOW_404" => "Y",
+                        "FILE_404" => "",
+                        "TITLE" => "От крупных застройщиков до малого бизнеса",
+                        "SUB_TITLE" => "Наши клиенты"
+                    ),
+                    false
+                );?>
                 <?global $vacancyFilter;
                 $vacancyFilter = array(
                 "ACTIVE" => array("Y", "N")
@@ -372,36 +447,16 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                     <div class="main-adv__subtitle">Работа с нами</div>
                     <h2 class="main-adv__title">Преимущества</h2>
                     <div class="main-adv-wrap">
-                        <div class="main-adv-left" data-aos="fade-right" data-aos-delay="1000">
-                            <div class="main-adv-left-item">
-                                <div class="main-adv-left-item-top">
-                                    <div class="main-adv-left-item-top__title">Профессиональные разработчики</div>
-                                </div>
-                                <div class="main-adv-left-item-content">Проектов становится все больше, и нам нужны суперспециалисты, которым можно доверить задачу любой сложности. Люди, которые могут принимать решения. Мы сами растим и развиваем этих людей.</div>
-                            </div>
-                            <div class="main-adv-left-item">
-                                <div class="main-adv-left-item-top">
-                                    <div class="main-adv-left-item-top__title">Прозрачное ценообразование</div>
-                                </div>
-                                <div class="main-adv-left-item-content">Проектов становится все больше, и нам нужны суперспециалисты, которым можно доверить задачу любой сложности. Люди, которые могут принимать решения. Мы сами растим и развиваем этих людей.</div>
-                            </div>
-                            <div class="main-adv-left-item">
-                                <div class="main-adv-left-item-top">
-                                    <div class="main-adv-left-item-top__title">Инициативность и отзывчивость</div>
-                                </div>
-                                <div class="main-adv-left-item-content">Проектов становится все больше, и нам нужны суперспециалисты, которым можно доверить задачу любой сложности. Люди, которые могут принимать решения. Мы сами растим и развиваем этих людей.</div>
-                            </div>
-                            <div class="main-adv-left-item">
-                                <div class="main-adv-left-item-top">
-                                    <div class="main-adv-left-item-top__title">Выполнение в срок</div>
-                                </div>
-                                <div class="main-adv-left-item-content">Проектов становится все больше, и нам нужны суперспециалисты, которым можно доверить задачу любой сложности. Люди, которые могут принимать решения. Мы сами растим и развиваем этих людей.</div>
-                            </div>
-                        </div>
-                        <div class="main-adv-right" id="lottie2" data-aos="fade" data-aos-delay="500"></div>
+                        <ul class="main-adv-left" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+                            <li class="main-adv-left-item-top__title">Профессиональные разработчики</li>
+                            <li class="main-adv-left-item-top__title">Прозрачное ценообразование</li>
+                            <li class="main-adv-left-item-top__title">Инициативность и отзывчивость</li>
+                            <li class="main-adv-left-item-top__title">Выполнение в срок</li>
+                        </ul>
+                        <div class="main-adv-right" id="lottie2" data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-delay="150"></div>
                     </div>
                 </div>
-                <div class="main-project" data-aos="fade-down" data-aos-delay="500">
+                <div class="main-project" data-aos="fade-down" data-aos-delay="300">
                     <div class="main-project__title">Начать проект</div>
                     <div class="main-project-content">
                         <div class="main-project-content-left"><svg width="464" height="368" viewBox="0 0 464 368" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -487,12 +542,15 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                 </defs>
                             </svg>
                         </div>
-                        <?$APPLICATION->IncludeComponent("slam:easyform", "main", Array(
-	"COMPONENT_TEMPLATE" => "vacancy",
-		"FORM_ID" => "FORM10",	// ID формы
-		"FORM_NAME" => "Заполните короткий бриф",	// Название формы
-		"WIDTH_FORM" => "470px",	// Ширина формы
-		"DISPLAY_FIELDS" => array(	// Поля (символьный код)
+                        <?$APPLICATION->IncludeComponent(
+	"slam:easyform", 
+	"uniform", 
+	array(
+		"COMPONENT_TEMPLATE" => "uniform",
+		"FORM_ID" => "FORM10",
+		"FORM_NAME" => "Заполните короткий бриф",
+		"WIDTH_FORM" => "main-project-content-form",
+		"DISPLAY_FIELDS" => array(
 			0 => "TITLE",
 			1 => "EMAIL",
 			2 => "PHONE",
@@ -500,58 +558,58 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 			4 => "COMPANY",
 			5 => "",
 		),
-		"REQUIRED_FIELDS" => array(	// Обязательные поля
+		"REQUIRED_FIELDS" => array(
 			0 => "TITLE",
 			1 => "EMAIL",
 			2 => "PHONE",
 			3 => "MESSAGE",
 			4 => "COMPANY",
 		),
-		"FIELDS_ORDER" => "TITLE,EMAIL,PHONE,COMPANY,MESSAGE",	// Расположение полей формы
-		"FORM_AUTOCOMPLETE" => "Y",	// Автокомплит значений полей формы
-		"HIDE_FIELD_NAME" => "Y",	// Скрывать названия полей  формы
-		"HIDE_ASTERISK" => "Y",	// Убрать двоеточие и звездочки
-		"FORM_SUBMIT_VALUE" => "Отправить",	// Название кнопки
-		"SEND_AJAX" => "Y",	// Отправлять форму при помощи AJAX?
-		"SHOW_MODAL" => "N",	// Показывать результат в модальном окне
-		"_CALLBACKS" => "success_FORM10",	// Название функции при успешной отправки ( "_callbacks" )
-		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",	// Сообщение об успешной отправке
-		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",	// Сообщение об ошибке
-		"ENABLE_SEND_MAIL" => "Y",	// Включить отправку писем
-		"CREATE_SEND_MAIL" => "",	// Создание нового почтового шаблона
-		"EVENT_MESSAGE_ID" => array(	// Шаблон письма
+		"FIELDS_ORDER" => "TITLE,EMAIL,PHONE,COMPANY,MESSAGE",
+		"FORM_AUTOCOMPLETE" => "Y",
+		"HIDE_FIELD_NAME" => "N",
+		"HIDE_ASTERISK" => "Y",
+		"FORM_SUBMIT_VALUE" => "Отправить",
+		"SEND_AJAX" => "Y",
+		"SHOW_MODAL" => "N",
+		"_CALLBACKS" => "success_FORM10",
+		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
+		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
+		"ENABLE_SEND_MAIL" => "Y",
+		"CREATE_SEND_MAIL" => "",
+		"EVENT_MESSAGE_ID" => array(
 			0 => "48",
 		),
-		"EMAIL_TO" => "",	// E-mail, на который будет отправлено письмо (по умолчанию используется из настроек модуля)
-		"EMAIL_BCC" => "",	// Скрытая копия
-		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",	// Тема сообщения для администратора
-		"EMAIL_FILE" => "Y",	// Прикладывать файлы к письму
-		"EMAIL_SEND_FROM" => "N",	// Отправлять письмо отправителю
-		"USE_IBLOCK_WRITE" => "N",	// Записывать результаты в ИБ
-		"CATEGORY_TITLE_TITLE" => "ФИО",	// Название
-		"CATEGORY_TITLE_TYPE" => "text",	// Тип поля
-		"CATEGORY_TITLE_PLACEHOLDER" => "ФИО",	// Placeholder
-		"CATEGORY_TITLE_VALUE" => "",	// Значение
+		"EMAIL_TO" => "",
+		"EMAIL_BCC" => "",
+		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
+		"EMAIL_FILE" => "Y",
+		"EMAIL_SEND_FROM" => "N",
+		"USE_IBLOCK_WRITE" => "N",
+		"CATEGORY_TITLE_TITLE" => "ФИО",
+		"CATEGORY_TITLE_TYPE" => "text",
+		"CATEGORY_TITLE_PLACEHOLDER" => "",
+		"CATEGORY_TITLE_VALUE" => "",
 		"CATEGORY_TITLE_VALIDATION_MESSAGE" => "Обязательное поле",
 		"CATEGORY_TITLE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
-		"CATEGORY_EMAIL_TITLE" => "E-mail",	// Название
-		"CATEGORY_EMAIL_TYPE" => "text",	// Тип поля
-		"CATEGORY_EMAIL_PLACEHOLDER" => "E-mail",	// Placeholder
-		"CATEGORY_EMAIL_VALUE" => "",	// Значение
+		"CATEGORY_EMAIL_TITLE" => "E-mail",
+		"CATEGORY_EMAIL_TYPE" => "text",
+		"CATEGORY_EMAIL_PLACEHOLDER" => "",
+		"CATEGORY_EMAIL_VALUE" => "",
 		"CATEGORY_EMAIL_VALIDATION_MESSAGE" => "Обязательное поле",
 		"CATEGORY_EMAIL_VALIDATION_ADDITIONALLY_MESSAGE" => "data-bv-emailaddress-message=\"E-mail введен некорректно\"",
-		"CATEGORY_PHONE_TITLE" => "Телефон",	// Название
-		"CATEGORY_PHONE_TYPE" => "tel",	// Тип поля
-		"CATEGORY_PHONE_PLACEHOLDER" => "Телефон",	// Placeholder
-		"CATEGORY_PHONE_VALUE" => "",	// Значение
+		"CATEGORY_PHONE_TITLE" => "Телефон",
+		"CATEGORY_PHONE_TYPE" => "tel",
+		"CATEGORY_PHONE_PLACEHOLDER" => "",
+		"CATEGORY_PHONE_VALUE" => "",
 		"CATEGORY_PHONE_VALIDATION_MESSAGE" => "Обязательное поле",
 		"CATEGORY_PHONE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
-		"CATEGORY_PHONE_INPUTMASK" => "N",	// Включить маску
-		"CATEGORY_PHONE_INPUTMASK_TEMP" => "+7 (999) 999-9999",	// Шаблон маски
-		"CATEGORY_MESSAGE_TITLE" => "Сообщение",	// Название
-		"CATEGORY_MESSAGE_TYPE" => "textarea",	// Тип поля
-		"CATEGORY_MESSAGE_PLACEHOLDER" => "Сообщение",	// Placeholder
-		"CATEGORY_MESSAGE_VALUE" => "",	// Значение
+		"CATEGORY_PHONE_INPUTMASK" => "N",
+		"CATEGORY_PHONE_INPUTMASK_TEMP" => "+7 (999) 999-9999",
+		"CATEGORY_MESSAGE_TITLE" => "Сообщение",
+		"CATEGORY_MESSAGE_TYPE" => "textarea",
+		"CATEGORY_MESSAGE_PLACEHOLDER" => "",
+		"CATEGORY_MESSAGE_VALUE" => "",
 		"CATEGORY_MESSAGE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
 		"CATEGORY_ADUCATION_TITLE" => "Образование",
 		"CATEGORY_ADUCATION_TYPE" => "text",
@@ -578,22 +636,35 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 		"CATEGORY_VACANCY_PLACEHOLDER" => "",
 		"CATEGORY_VACANCY_VALUE" => "",
 		"CATEGORY_VACANCY_VALIDATION_ADDITIONALLY_MESSAGE" => "",
-		"USE_CAPTCHA" => "N",	// Использовать капчу reCAPTCHA
-		"USE_MODULE_VARNING" => "N",	// Использовать сообщение из настроек модуля
-		"USE_FORMVALIDATION_JS" => "N",	// Проверять поля через JS Bootstrap Validators
+		"USE_CAPTCHA" => "N",
+		"USE_MODULE_VARNING" => "N",
+		"USE_FORMVALIDATION_JS" => "N",
 		"HIDE_FORMVALIDATION_TEXT" => "N",
 		"INCLUDE_BOOTSRAP_JS" => "Y",
-		"USE_JQUERY" => "N",	// Подключить jQuery-1.12.4
-		"USE_BOOTSRAP_CSS" => "N",	// Подключить стандартные стили Bootstrap 3
-		"USE_BOOTSRAP_JS" => "N",	// Подключить стандартный JS Bootstrap 3
-		"FORM_SUBMIT_VARNING" => "Нажимая на кнопку \"#BUTTON#\", вы даете согласие на обработку <a target=\"_blank\" href=\"#\">персональных данных</a>",	// Сообщение, выводимое перед кнопкой
+		"USE_JQUERY" => "N",
+		"USE_BOOTSRAP_CSS" => "N",
+		"USE_BOOTSRAP_JS" => "N",
+		"FORM_SUBMIT_VARNING" => "Нажимая на кнопку \"#BUTTON#\", вы даете согласие на обработку <a target=\"_blank\" href=\"#\">персональных данных</a>",
 		"CATEGORY_FILE_FILE_EXTENSION" => "doc, docx, xls, xlsx, txt, rtf, pdf, png, jpeg, jpg, gif",
 		"CATEGORY_FILE_FILE_MAX_SIZE" => "20971520",
 		"CATEGORY_FILE_DROPZONE_INCLUDE" => "Y",
-		"CATEGORY_COMPANY_TITLE" => "Компания",	// Название
-		"CATEGORY_COMPANY_TYPE" => "text",	// Тип поля
-		"CATEGORY_COMPANY_PLACEHOLDER" => "Компания",	// Placeholder
-		"CATEGORY_COMPANY_VALUE" => "",	// Значение
+		"CATEGORY_COMPANY_TITLE" => "Компания",
+		"CATEGORY_COMPANY_TYPE" => "text",
+		"CATEGORY_COMPANY_PLACEHOLDER" => "",
+		"CATEGORY_COMPANY_VALUE" => "",
+		"CATEGORY_TITLE_WIDTH" => "",
+		"CATEGORY_EMAIL_WIDTH" => "input-100",
+		"CATEGORY_PHONE_WIDTH" => "",
+		"CATEGORY_MESSAGE_WIDTH" => "",
+		"CATEGORY_COMPANY_WIDTH" => "",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"CATEGORY_TITLE_CLASS" => "general-itemInput_half",
+		"CATEGORY_EMAIL_CLASS" => "general-itemInput_half",
+		"CATEGORY_PHONE_CLASS" => "general-itemInput_half",
+		"CATEGORY_MESSAGE_CLASS" => "",
+		"CATEGORY_COMPANY_CLASS" => "general-itemInput_half",
+		"CLEAR_FORM" => "N"
 	),
 	false
 );?>

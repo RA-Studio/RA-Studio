@@ -16,8 +16,8 @@ $this->setFrameMode(true);
 	<?=$arResult["NAV_STRING"]?><br />
 <?endif;?>
 <div class="main-vacancy">
-    <div class="main-vacancy__subtitle">Наша команда продолжает расти</div>
-    <h2 class="main-vacancy__title">Открытые вакансии</h2>
+    <div class="main-vacancy__subtitle"><?=$arParams['SUB_TITLE']?></div>
+    <h2 class="main-vacancy__title"><?=$arParams['TITLE']?></h2>
     <div class="main-vacancy-wrap">
         <div class="main-vacancy-items">
             <?foreach($arResult["ITEMS"] as $key=>$arItem):?>

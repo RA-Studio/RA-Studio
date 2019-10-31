@@ -8,41 +8,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Разработка сайтов", 
-		"/development/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Веб-дизайн", 
-		"/web-design/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Продвижение", 
-		"/promotion/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контекстная реклама", 
-		"/contextual-advertising/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Управление репутацией", 
-		"/reputation-management/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Портфолио", 
 		"/portfolio/", 
 		Array(), 
@@ -79,7 +44,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Кейсы", 
-		"/cases/", 
+		"/projects/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -87,6 +52,13 @@ $aMenuLinks = Array(
 	Array(
 		"Услуги", 
 		"/services/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"test.php", 
+		"/test.php", 
 		Array(), 
 		Array(), 
 		"" 

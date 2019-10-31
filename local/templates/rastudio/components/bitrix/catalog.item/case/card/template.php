@@ -30,9 +30,9 @@ use \Bitrix\Main\Localization\Loc;
         <?=$item['PREVIEW_TEXT']?>
     </div>
     <div class="cases-items-item-left-tags">
-        <?foreach ($item['PROPERTIES']['UF_TAGS']['VALUE'] as $tag){
-            echo $tag." ";
-        }?>
+        <?foreach ($item['PROPERTIES']['UF_TAGS']['VALUE'] as $tag){?>
+            <span><?=$tag?></span>
+        <?}?>
     </div>
     <a href="<?=$item['DETAIL_PAGE_URL']?>" class="cases-items-item-left__btn">Смотреть кейс</a>
 </div>

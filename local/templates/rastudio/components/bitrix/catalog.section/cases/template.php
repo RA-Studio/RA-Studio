@@ -173,7 +173,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 	<?
 }
 ?>
-<div class="cases-items-wrap" >
+<div class="cases-items-wrap">
     <div class="cases-items" data-entity="<?=$containerName?>">
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
@@ -243,14 +243,14 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 		);
 	}
 	?>
-<?
-if ($showLazyLoad)
-{
-	?>
-    <div  data-use="show-more-<?=$navParams['NavNum']?>" style="display: block" class="cases-items-more"><?=$arParams['MESS_BTN_LAZY_LOAD']?></div>
-	<?
-}?>
     </div>
+    <?
+    if ($showLazyLoad)
+    {
+        ?>
+        <div  data-use="show-more-<?=$navParams['NavNum']?>" class="cases-items-more"><?=$arParams['MESS_BTN_LAZY_LOAD']?></div>
+        <?
+    }?>
 </div>
         <?
 

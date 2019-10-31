@@ -152,7 +152,7 @@ $WITH_FORM = strlen($arParams['WIDTH_FORM']) > 0 ? 'style="max-width:'.$arParams
                         <? if(!$arParams['HIDE_FIELD_NAME']): ?>
                             <label for="<?=$arField['ID']?>"><?=$arField['TITLE']?></label>
                         <? endif; //input-33 input-50 input-100?>
-                        <input class="vacancy-form__input input-50" type="<?=$arField['TYPE'];?>" id="<?=$arField['ID']?>" name="<?=$arField['NAME']?>" value="<?=$arField['VALUE'];?>" <?=$arField['PLACEHOLDER_STR'];?> <?=$arField['REQ_STR']?> <?=$arField['REQUIRED']==1?'data-required':''?> <?=$arField['MASK_STR']?>>
+                        <input class="vacancy-form__input <?=$arField['CLASS']?$arField['CLASS']:'input-50'?>" type="<?=$arField['TYPE'];?>" id="<?=$arField['ID']?>" name="<?=$arField['NAME']?>" value="<?=$arField['VALUE'];?>" <?=$arField['PLACEHOLDER_STR'];?> <?=$arField['REQ_STR']?> <?=$arField['REQUIRED']==1?'data-required':''?> <?=$arField['MASK_STR']?>>
                     <?endif;
                 endforeach;?>
                 <?if($arParams["USE_CAPTCHA"]):?>

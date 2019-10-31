@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("subtitle", "Наша команда продолжает расти");
 $APPLICATION->SetPageProperty("TITLE", "Открытые вакансии");
 $APPLICATION->SetTitle("Открытые вакансии ");
 ?>
@@ -77,6 +78,7 @@ $APPLICATION->SetTitle("Открытые вакансии ");
 			25 => "MODIFIED_BY",
 			26 => "USER_NAME",
 			27 => "ACTIVE",
+			28 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
 			0 => "UF_TAGS",
@@ -95,7 +97,7 @@ $APPLICATION->SetTitle("Открытые вакансии ");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Вакансии",
+		"PAGER_TITLE" => "Открытые вакансии",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -126,6 +128,8 @@ $APPLICATION->SetTitle("Открытые вакансии ");
 			0 => "",
 			1 => "",
 		),
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

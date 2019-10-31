@@ -24,20 +24,36 @@ $arUrlRewrite=array (
     'PATH' => '/project-board/index.php',
     'SORT' => 100,
   ),
-  6 => 
+  12 => 
   array (
     'CONDITION' => '#^/services/#',
     'RULE' => '',
-    'ID' => 'bitrix:news',
+    'ID' => 'bitrix:catalog',
     'PATH' => '/services/index.php',
     'SORT' => 100,
   ),
-  3 => 
+  20 => 
+  array (
+    'CONDITION' => '#^/projects/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/projects/index.php',
+    'SORT' => 100,
+  ),
+  9 => 
   array (
     'CONDITION' => '#^/vacancy/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/vacancy/index.php',
+    'SORT' => 100,
+  ),
+  13 => 
+  array (
+    'CONDITION' => '#^/cases/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/cases/index.php',
     'SORT' => 100,
   ),
   1 => 
@@ -48,7 +64,7 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
-  4 => 
+  19 => 
   array (
     'CONDITION' => '#^/blog/#',
     'RULE' => '',

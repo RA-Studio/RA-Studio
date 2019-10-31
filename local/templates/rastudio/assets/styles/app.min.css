@@ -13,6 +13,25 @@ body {
     color: #000;
     margin: 0;
     position: relative;
+    font-family: 'Avenir Next Cyr';
+}
+body{
+    overflow-x: hidden;
+}
+@media screen and (min-width:1200px) {
+	::-webkit-scrollbar {
+		width: 8px
+	}
+	::-webkit-scrollbar-button {  
+		display: none; 
+	}
+	::-webkit-scrollbar-track { 
+		background-color: #fff;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #6E1866; 
+		border-radius: 10px;
+	}
 }
 
 a {
@@ -40,7 +59,6 @@ img {
 }
 
 .wrapper {
-    overflow-x: hidden;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -50,14 +68,21 @@ img {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column
+    flex-direction: column;
+    opacity: 0;
+    -webkit-animation: tadaa 0.2s normal forwards ease-in-out;
+    animation: tadaa 0.2s normal forwards ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s
 }
 
 .content {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
-    flex: 1
+    flex: 1;
 }
 
 
@@ -245,23 +270,23 @@ template {
 }
 
 @font-face {
-    font-family: 'Avenir Next Cyr Demi';
+	font-family: 'Avenir Next Cyr';
     src: url("../fonts/AvenirNextCyr-Demi.eot");
     src: url("../fonts/AvenirNextCyr-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Demi.woff") format("woff"), url("../fonts/AvenirNextCyr-Demi.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'Avenir Next Cyr Medium';
+	font-family: 'Avenir Next Cyr';
     src: url("../fonts/AvenirNextCyr-Medium.eot");
     src: url("../fonts/AvenirNextCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Medium.woff") format("woff"), url("../fonts/AvenirNextCyr-Medium.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 450;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'Avenir Next Cyr Regular';
+	font-family: 'Avenir Next Cyr';
     src: url("../fonts/AvenirNextCyr-Regular.eot");
     src: url("../fonts/AvenirNextCyr-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Regular.woff") format("woff"), url("../fonts/AvenirNextCyr-Regular.ttf") format("truetype");
     font-weight: normal;
@@ -269,10 +294,10 @@ template {
 }
 
 @font-face {
-    font-family: 'Avenir Next Cyr Light';
+	font-family: 'Avenir Next Cyr';
     src: url("../fonts/AvenirNextCyr-Light.eot");
     src: url("../fonts/AvenirNextCyr-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Light.woff") format("woff"), url("../fonts/AvenirNextCyr-Light.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal
 }
 
@@ -291,7 +316,7 @@ template {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
-    z-index: 101
+    z-index: 101;
 }
 .header-logo {
     display: inline-block;
@@ -301,8 +326,12 @@ template {
 }
 .header-menu__item{
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Regular';
-    margin: 0 25px;
+    margin: 0 20px;
+    display: inline-block;
+    line-height: 35px;
+}
+.header-menu__item.selected{
+	border-bottom: 2px solid rgba(110, 24, 102, 0.75);
 }
 .header-menu-mobile{
     position: absolute;
@@ -310,12 +339,14 @@ template {
     top: 0;
     width: 100%;
     background: #fff;
-    transform: translateY(-100%);
     transition: .3s;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear 0s;
+    opacity: 0;
+    display: none;
 }
 .header-menu-mobile-wrap{
-    padding: 87px 20px 50px;
+    padding: 67px 20px 50px;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -324,9 +355,6 @@ template {
     justify-content: space-between;
     -ms-align-items: flex-end;
     align-items: flex-end;
-}
-.header-menu-mobile.active{
-    transform: translateY(0);
 }
 .header-menu-mobile-col{
     display: -webkit-flex;
@@ -349,7 +377,7 @@ template {
     text-align: right;
 }
 .header-menu-mobile-col__link{
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 24px;
     line-height: 29px;
     margin-top: 37px;
@@ -365,13 +393,15 @@ template {
     font-size: 18px;
     line-height: 22px;
     color: rgba(0, 0, 0, 0.75);
-    font-family: 'Avenir Next Cyr Regular';
     margin-top: 25px;
 }
 .header-menu-mobile-col__item svg{
     margin-right: 10px;
 }
 @media screen and (max-width:1200px) {
+    .header-menu-mobile{
+        display: block;
+    }
     .header-menu{
         display: none;
     }
@@ -391,9 +421,9 @@ template {
 }
 
 .header-info__phone {
-    font-family: 'Avenir Next Cyr Demi';
-    margin-right: 40px;
-    font-size: 18px
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .header-info__btn {
@@ -414,7 +444,7 @@ template {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 14px;
     color: #6E1866;
     -webkit-transition: 0.3s;
@@ -483,7 +513,16 @@ template {
 
 @media screen and (max-width: 1200px) {
     .header {
-        padding: 20px
+        padding: 10px 17px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: #fff;
+		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .content{
+    	padding-top: 75px;
     }
     .header-logo svg {
         height: 50px;
@@ -557,7 +596,7 @@ template {
 
 @media screen and (max-width: 360px) {
     .header{
-        padding: 20px 10px;
+        padding: 10px 10px;
     }
     .header-menu-mobile-wrap{
         padding-left: 10px;
@@ -577,15 +616,86 @@ template {
     padding: 20px 40px;
     -ms-align-items: center;
     align-items: center;
+    background: #fff;
+    position: relative;
+    z-index: 2;
 }
-
+.toTop{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 100vh;
+	transition: .2s;
+	cursor: pointer;
+	display: none;
+}
+@media screen and (min-width: 1200px) {
+	.toTop:hover{
+		background: rgba(110, 24, 102, 0.05);
+	}
+}
+.toTop span{
+	position: absolute;
+	font-weight: 450;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.4);
+	right: 15px;
+	top: 60px;
+}
+.toTop span:before{
+	content: '';
+	width: 7px;
+	height: 7px;
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+	border-right: 1px solid rgba(0, 0, 0, 0.25);
+	position: absolute;
+	left: -15px;
+    top: 7px;
+	transform: rotate(-45deg);
+}
+@media screen and (max-width: 1440px) {
+	.toTop{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		display: none;
+		justify-content: center;
+		-ms-align-items: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		background: url('../images/toTop.svg') center no-repeat;
+		background-size: cover;
+		box-shadow: 1px 2px 10px rgba(110, 24, 102, 0.2);
+		left: 20px;
+		bottom: 100px;
+		top: auto;
+		border-radius: 50%;
+	}
+	@media screen and (min-width: 1200px) {
+		.toTop:hover{
+			background: url('../images/toTop.svg') center no-repeat;
+			background-size: cover;
+		}
+	}
+	.toTop span{
+		display: none;
+	}
+}
+@media screen and (max-width: 1199px) {
+	.toTop{
+		display: none!important;
+	}
+}
 .footer-left {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Regular'
 }
 
 .footer-left__item {
@@ -603,7 +713,7 @@ template {
     display: flex;
     font-size: 18px;
     line-height: 18px;
-    font-family: 'Avenir Next Cyr Medium'
+    font-weight: 450;
 }
 
 .footer-right__item {
@@ -692,7 +802,6 @@ template {
 }
 
 .popup-form__title {
-    font-family: 'Avenir Next Cyr Regular';
     font-size: 24px;
     margin-bottom: 30px;
     text-align: center
@@ -704,48 +813,6 @@ template {
     display: -ms-flexbox;
     display: flex;
     margin: 0 -10px
-}
-
-.popup-form-row__input {
-    margin: 0 10px 20px;
-    width: 50%;
-    height: 50px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 0 20px;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7)
-}
-.popup-form-row__input:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-.popup-form-row__input:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-
-.popup-form textarea {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    resize: none;
-    width: 100%;
-    padding: 20px;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px
-}
-.popup-form textarea:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-.popup-form textarea:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
 }
 
 .popup-form-bot {
@@ -773,7 +840,7 @@ template {
     border: none;
     color: #fff;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     cursor: pointer;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -802,7 +869,7 @@ template {
     margin-bottom: 20px;
     text-align: center;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Light';
+    font-weight: 300;
     color: rgba(0, 0, 0, 0.7)
 }
 
@@ -821,18 +888,6 @@ template {
         -ms-flex-direction: column;
         flex-direction: column;
         margin: 0
-    }
-    .popup-form-row__input {
-        margin: 0;
-        margin-bottom: 20px;
-        width: 100%;
-        height: 40px;
-        padding: 0 10px;
-        font-size: 12px
-    }
-    .popup-form textarea {
-        padding: 10px;
-        font-size: 12px
     }
     .popup-form-bot {
         display: -webkit-box;
@@ -857,8 +912,8 @@ template {
         max-width: 430px;
         margin-bottom: 20px;
         text-align: center;
-        font-size: 14px;
-        font-family: 'Avenir Next Cyr Light';
+        font-size: 14px;   
+        font-weight: 300;
         color: rgba(0, 0, 0, 0.7)
     }
 }
@@ -939,7 +994,6 @@ template {
 }
 
 .main-banner-left__text {
-    font-family: 'Avenir Next Cyr Regular';
     font-size: 18px;
     color: rgba(0, 0, 0, 0.7);
     margin-bottom: 25px;
@@ -953,7 +1007,7 @@ template {
 }
 
 .main-banner-left__title {
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     font-size: 48px;
     margin: 0;
     margin-bottom: 40px;
@@ -982,7 +1036,7 @@ template {
 }
 
 .main-banner-left-items__item {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.7);
     margin-right: 35px;
@@ -1007,7 +1061,7 @@ template {
     border: 2px solid #6E1866;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 14px;
     color: #6E1866;
     -webkit-transition: 0.3s;
@@ -1135,7 +1189,6 @@ template {
     margin-left: 15px;
     max-width: 146px;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Regular';
     color: rgba(0, 0, 0, 0.5)
 }
 
@@ -1159,7 +1212,6 @@ template {
 
 .main-about__subtitle {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 25px
 }
 
@@ -1167,7 +1219,7 @@ template {
     margin: 0;
     font-size: 36px;
     font-weight: normal;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 75px
 }
 
@@ -1217,14 +1269,13 @@ template {
 
 .main-about-items-item__title {
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     color: #6E1866;
     text-shadow: 0px 0px 10px rgba(255, 235, 235, 0.25);
     margin-bottom: 15px
 }
 
 .main-about-items-item__text {
-    font-family: 'Avenir Next Cyr Regular';
     font-size: 14px
 }
 
@@ -1261,7 +1312,6 @@ template {
 
 .main-ways__subtitle {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 25px;
     text-align: center
 }
@@ -1270,7 +1320,7 @@ template {
     margin: 0;
     font-size: 36px;
     font-weight: normal;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 75px;
     text-align: center
 }
@@ -1366,8 +1416,9 @@ template {
 }
 
 .main-ways-item-top-left-info__title {
+    margin: 0;
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     color: #FFFFFF;
     margin-bottom: 15px
 }
@@ -1380,7 +1431,7 @@ template {
 }
 
 .main-ways-item-top-left-info-items__item {
-    font-family: 'Avenir Next Cyr Regular';
+    margin: 0;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     margin-right: 30px
@@ -1392,7 +1443,7 @@ template {
 }
 
 .main-ways-item-main__title {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 24px
 }
 
@@ -1414,13 +1465,13 @@ template {
 }
 
 .main-ways-item-main-content-left__title {
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     font-size: 36px;
     margin: 20px 0
 }
 
 .main-ways-item-main-content-left__text {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 14px;
     line-height: 21px
 }
@@ -1428,7 +1479,6 @@ template {
 .main-ways-item-main-content-right {
     font-size: 14px;
     line-height: 21px;
-    font-family: 'Avenir Next Cyr Regular'
 }
 
 .main-ways-item-main-content-right p {
@@ -1446,7 +1496,6 @@ template {
 
 .main-clients__subtitle {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 25px;
     text-align: center
 }
@@ -1455,27 +1504,18 @@ template {
     margin: 0;
     font-size: 36px;
     font-weight: normal;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 75px;
     text-align: center
 }
 
 .main-clients-items {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
 }
 
 .main-clients-items-item {
-    width: 25%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1488,9 +1528,10 @@ template {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 40px
 }
-
+.main-clients-items-item img{
+    max-width: 100%;
+}
 .main-vacancy {
     max-width: 1085px;
     margin: 60px auto 0;
@@ -1499,7 +1540,6 @@ template {
 
 .main-vacancy__subtitle {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 25px;
     text-align: center
 }
@@ -1508,7 +1548,7 @@ template {
     margin: 0;
     font-weight: normal;
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 75px;
     text-align: center
 }
@@ -1561,7 +1601,6 @@ template {
 
 .main-vacancy-items-item__text {
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 25px;
     margin-left: 30px;
     margin-top: 30px
@@ -1569,7 +1608,7 @@ template {
 
 .main-vacancy-items-item__title {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 30px;
     flex: 0 0 54px;
     margin-left: 30px;
@@ -1595,7 +1634,6 @@ template {
     -ms-flex-align: center;
     align-items: center;
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-left: 30px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -1674,7 +1712,6 @@ template {
 
 .main-adv__subtitle {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 25px;
     text-align: center
 }
@@ -1683,7 +1720,7 @@ template {
     margin: 0;
     font-weight: normal;
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 75px;
     text-align: center
 }
@@ -1725,34 +1762,29 @@ template {
     justify-content: center
 }
 
-.main-adv-left-item {
+.main-adv-left-item-top__title {
+    padding: 20px 0 40px;
+    font-weight: 450;
+    font-size: 18px;
+    position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    padding-bottom: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
-
-.main-adv-left-item:last-child {
+@media screen and (max-width:1200px) {
+    .main-adv-left-item-top__title {
+        padding: 15px 0 30px;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 767px){
+    .main-adv-left-item-top__title {
+        padding: 10px 0 20px;
+        margin-bottom: 10px;
+    }
+}
+.main-adv-left-item-top__title:last-child{
     border-bottom: none
 }
-
-.main-adv-left-item-top {
-    /*cursor: pointer;*/
-    padding: 20px 0;
-    position: relative
-}
-
-.main-adv-left-item-top.out:before {
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0)
-}
-
-.main-adv-left-item-top__title {
-    font-family: 'Avenir Next Cyr Medium';
-    font-size: 18px;
-    position: relative
-}
-
 .main-adv-left-item-top__title:before {
     display: block;
     content: '';
@@ -1769,37 +1801,6 @@ template {
     transform: translateX(-50%)
 }
 
-/*.main-adv-left-item-top:before,
-.main-adv-left-item-top:after {
-    content: '';
-    display: block;
-    width: 14px;
-    height: 1px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    right: 0;
-    top: 30px;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s
-}*/
-
-.main-adv-left-item-top:before {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg)
-}
-
-.main-adv-left-item-content {
-    display: none;
-    padding-bottom: 20px;
-    font-size: 14px;
-    font-family: 'Avenir Next Cyr Regular';
-    color: rgba(0, 0, 0, 0.7)
-}
-
 .main-project {
     max-width: 1085px;
     margin: 90px auto 80px;
@@ -1810,7 +1811,7 @@ template {
     margin: 0;
     font-weight: normal;
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 60px;
     text-align: center
 }
@@ -1836,7 +1837,6 @@ template {
 
 .main-project-content-form__title {
     font-size: 24px;
-    font-family: 'Avenir Next Cyr';
     font-weight: 500;
     margin-bottom: 25px
 }
@@ -1851,48 +1851,6 @@ template {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between
-}
-
-.main-project-content-form-row__input {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 20px;
-    width: 48.5%;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    transition: .3s;
-}
-.main-project-content-form-row__input:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-.main-project-content-form-row__input:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-
-.main-project-content-form textarea {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    resize: none;
-    width: 100%;
-    padding: 20px;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 30px;
-    transition: .3s;
-}
-.main-project-content-form textarea:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-.main-project-content-form textarea:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
 }
 
 .main-project-content-form-bot {
@@ -1915,7 +1873,7 @@ template {
     border: none;
     color: #fff;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     cursor: pointer;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -1941,7 +1899,7 @@ template {
 
 .main-project-content-form-bot span {
     display: block;
-    font-family: 'Avenir Next Cyr Light';
+    font-weight: 300;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7);
     margin-left: 20px
@@ -1949,6 +1907,8 @@ template {
 
 .main-project-content-left{
     margin-right: 30px;
+    align-self: flex-start;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2177,9 +2137,9 @@ template {
         width: 47.7%;
         padding: 10px
     }
-    .main-project-content-form textarea {
+    /*.main-project-content-form textarea {
         padding: 10px
-    }
+    }*/
     .main-project-content-form-bot__btn {
         height: 40px
     }
@@ -2370,21 +2330,7 @@ template {
         margin-bottom: 40px
     }
     .main-clients-items {
-        padding: 0 5px;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between
-    }
-    .main-clients-items-item {
-        width: 26%;
-        margin-bottom: 30px
-    }
-    .main-clients-items-item img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 100%
+        grid-template-columns: repeat(2, 1fr);
     }
     .main-vacancy {
         margin-top: 30px;
@@ -2448,7 +2394,11 @@ template {
         padding-left: 20px
     }
     .main-adv-left-item-top__title {
-        font-size: 14px
+        font-size: 14px;
+        padding-left: 15px;
+    }
+    .main-adv-left-item-top__title:before{
+        left: 0;
     }
     .main-project {
         margin-top: 40px;
@@ -2473,7 +2423,8 @@ template {
     .main-project-content-left {
         width: 100%;
         padding: 0 20px;
-        margin-bottom: 40px
+        margin-bottom: 40px;
+        margin-right: 0;
     }
     .main-project-content-left svg {
         height: auto
@@ -2493,15 +2444,6 @@ template {
         -ms-flex-direction: column;
         flex-direction: column;
         margin-bottom: 0
-    }
-    .main-project-content-form-row__input {
-        width: 100%;
-        margin-bottom: 20px;
-        font-size: 12px
-    }
-    .main-project-content-form textarea {
-        font-size: 12px;
-        margin-bottom: 20px
     }
     .main-project-content-form-bot {
         -webkit-box-orient: vertical;
@@ -2534,7 +2476,7 @@ template {
 
 .vacancy__title {
     margin: 0;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 36px;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 40px
@@ -2542,7 +2484,6 @@ template {
 
 .vacancy__desc {
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Regular';
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 70px
 }
@@ -2572,14 +2513,13 @@ template {
 }
 
 .vacancy-list__title {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 24px;
     color: #6E1866;
     margin-bottom: 30px
 }
 
 .vacancy-list__item {
-    font-family: 'Avenir Next Cyr Regular';
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 10px;
@@ -2602,7 +2542,7 @@ template {
 }
 
 .vacancy-bonus__title {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 24px;
     margin-bottom: 40px;
     color: #6E1866;
@@ -2634,13 +2574,12 @@ template {
 }
 
 .vacancy-bonus-item__title {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 18px;
     margin-bottom: 10px
 }
 
 .vacancy-bonus-item__text {
-    font-family: 'Avenir Next Cyr Regular';
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7)
 }
@@ -2651,7 +2590,7 @@ template {
 
 .vacancy-form__title {
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 50px
 }
@@ -2674,66 +2613,13 @@ template {
     -o-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.vacancy-form__input {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 16px;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    margin: 0 10px 20px;
-}
-.vacancy-form-row__input {
-    width: 33%;
-    margin: 0 10px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 16px;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7)
-}
-.vacancy-form-row__input:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-.vacancy-form-row__input:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-}
-
-.vacancy-form textarea {
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    resize: none;
-    padding: 20px;
-    font-family: 'Avenir Next Cyr Light';
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 30px;
-    transition: .3s;
-}
-.vacancy-form textarea:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-    transition: .3s;
-}
-.vacancy-form textarea:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-    transition: .3s;
-}
 
 .vacancy-form-file label {
     cursor: pointer;
     position: relative;
     padding-left: 25px;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     color: rgba(0, 0, 0, 0.7)
 }
 
@@ -2777,7 +2663,7 @@ template {
     border: none;
     color: #fff;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     cursor: pointer;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -2803,7 +2689,7 @@ template {
 
 .vacancy-form-bot span {
     display: block;
-    font-family: 'Avenir Next Cyr Light';
+    font-weight: 300;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7);
     margin-left: 20px;
@@ -2848,10 +2734,6 @@ template {
     .vacancy-form-row__input {
         padding: 11px;
         font-size: 12px
-    }
-    .vacancy-form textarea {
-        padding: 11px;
-        margin-bottom: 20px
     }
     .vacancy-form-file label {
         font-size: 12px;
@@ -2947,13 +2829,12 @@ template {
 }
 .popup-cookie-form__title{
     text-align: center;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 24px;
     margin-bottom: 20px;
 }
 .popup-cookie-form__text{
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 30px;
     text-align: center;
 }
@@ -2971,7 +2852,7 @@ template {
     box-sizing: border-box;
     border-radius: 5px 0px 0px 5px;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Light';
+    font-weight: 300;
     height: 50px;
     width: 260px;
     padding-left: 20px;
@@ -2983,7 +2864,7 @@ template {
     border: none;
     font-size: 14px;
     color: #FFFFFF;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     width: 154px;
     height: 50px;
 }
@@ -3011,13 +2892,11 @@ template {
     }
 }
 input.input-err{
-    border: 1px solid #FF002A;
-    box-shadow: 0px 0px 4px rgba(224, 24, 57, 0.25);
+    border-color: #FF002A;
 }
 input.input-border,
 textarea.input-border{
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    box-shadow: none;
+    border-color: rgba(0, 0, 0, 1);
     color: #000000;
 }
 
@@ -3028,7 +2907,6 @@ form.success textarea{
 }
 .header-info-lang-change{
     display: none;
-    font-family: 'Avenir Next Cyr Regular';
     position: absolute;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -3056,7 +2934,7 @@ form.success textarea{
     position: relative;
     display: flex;
     align-items: center;
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     cursor: pointer;
     padding: 10px;
     transition: 0.3s;
@@ -3218,34 +3096,9 @@ form.success textarea{
 .vacancy-form__input{
 	transition: .3s;
 }
-.vacancy-form-row textarea{
-	margin: 0 10px 20px;
-}
-.input-33{
-	width: calc(33.33% - 20px);
-}
-.input-50{
-	width: calc(50% - 20px);
-}
-.input-100{
-	width: 100%;
-}
-.vacancy-form__input:hover{
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-    transition: .3s;
-}
-.vacancy-form__input:focus{
-    color: #000000;
-    box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-    transition: .3s;
-}
-.vacancy-form-row textarea:last-child,
-.vacancy-form-row input:last-child{
-	margin-bottom: 0;
-}
 .vacancy-form-file{
 	margin: 0 10px;
-	font-family: 'Avenir Next Cyr Light';
+	font-weight: 300;
 	transition: .3s;
 }
 .vacancy-form-file .file-placeholder{
@@ -3307,14 +3160,6 @@ form.success textarea{
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.vacancy-form-row textarea{
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.vacancy-form-row textarea:last-child,
-	.vacancy-form-row input:last-child{
-		margin-bottom: 20px;
-	}
 	.vacancy-form-bot{
 		margin-top: 0;
 	}
@@ -3370,11 +3215,11 @@ form.success textarea{
 }
 .page404__title{
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     margin-bottom: 25px;
 }
 .page404__text{
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -3405,7 +3250,7 @@ form.success textarea{
     border-radius: 5px;
     font-size: 16px;
     color: #681761;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
 }
 @media screen and (min-width: 1200px){
     .page404-btns a:hover {
@@ -3570,7 +3415,7 @@ form.success textarea{
 }
 
 .tasks-main-item-afterImage__name {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 14px
@@ -3579,7 +3424,7 @@ form.success textarea{
 .tasks-main-item-afterImage__status {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3602,7 +3447,7 @@ form.success textarea{
 }
 
 .tasks-main-item-centerFlex__title {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 20px;
     line-height: 25px;
     margin-bottom: 15px;
@@ -3610,7 +3455,7 @@ form.success textarea{
 }
 
 .tasks-main-item-centerFlex__text {
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     font-size: 16px;
     line-height: 20px;
     color: #000
@@ -3640,7 +3485,7 @@ form.success textarea{
     justify-content: center;
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     color: #FFFFFF
 }
 
@@ -3650,7 +3495,7 @@ form.success textarea{
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 35px;
-    font-family: 'Avenir Next Cyr Medium'
+    font-weight: 450;
 }
 
 .tasks-breadcrumbs a {
@@ -3749,13 +3594,13 @@ form.success textarea{
     margin-bottom: 15px;
     font-size: 24px;
     line-height: 29px;
-    font-family: 'Avenir Next Cyr Medium'
+    font-weight: 450;
 }
 
 .tasks-full__text {
     margin-bottom: 30px;
     font-size: 16px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     line-height: 135%;
     color: rgba(0, 0, 0, 0.75)
 }
@@ -3774,14 +3619,13 @@ form.success textarea{
 }
 .subtitle{
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Regular';
     color: rgba(0, 0, 0, 0.75);
     max-width: 1160px;
     margin: 0 auto 20px;
 }
 .title{
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     color: rgba(0, 0, 0, 0.9);
     max-width: 1160px;
     margin: 0 auto 50px;
@@ -3827,13 +3671,12 @@ form.success textarea{
 
 .services-items-item__title{
     font-size: 24px;
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     color: rgba(0, 0, 0, 0.9);
     margin-bottom: 15px;
 }
 .services-items-item__text{
     font-size: 18px;
-    font-family: 'Avenir Next Cyr Regular';
     color: rgba(0, 0, 0, 0.75);
 }
 .services-items-item__btn{
@@ -3852,7 +3695,7 @@ form.success textarea{
     font-size: 16px;
     color: #6E1866;
     margin-top: auto;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     transition: .3s;
     display: none;
 }
@@ -4011,7 +3854,7 @@ form.success textarea{
     -ms-align-items: center;
     align-items: center;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
     margin-right: 20px;
     cursor: pointer;
@@ -4037,7 +3880,6 @@ form.success textarea{
 }
 .cases-items-item-left__title{
     font-size: 36px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-top: 40px;
     margin-bottom: 30px;
 }
@@ -4046,7 +3888,6 @@ form.success textarea{
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 35px;
-    font-family: 'Avenir Next Cyr Regular';
 }
 .cases-items-item-left-tags{
     margin-bottom: 25px;
@@ -4056,7 +3897,6 @@ form.success textarea{
     font-size: 18px;
     color: rgba(0, 0, 0, 0.6);
     margin-right: 30px;
-    font-family: 'Avenir Next Cyr Regular';
     margin-bottom: 10px;
 }
 .cases-items-item-left__btn{
@@ -4073,13 +3913,12 @@ form.success textarea{
     border: 2px solid #6E1866;
     border-radius: 5px;
     font-size: 16px;
-    font-family: 'Avenir Next Cyr Demi';
+    font-weight: 600;
     color: #6E1866;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
     background: #fff;
-    display: none;
 }
 @media screen and (min-width: 1200px) {
     .cases-items-item-left__btn:hover{
@@ -4106,6 +3945,7 @@ form.success textarea{
     perspective: 1000px;
 }
 .cases-items-item-right-img{
+	display: block;
     width: 100%;
     height: 100%;
     -webkit-perspective: 2000px;
@@ -4135,7 +3975,7 @@ form.success textarea{
     -webkit-transform: scale(.775) translateZ(150px);
     -moz-transform: scale(.775) translateZ(150px);
     transform: scale(.775) translateZ(150px);
-    max-width: 100%;
+    width: 100%;
 }
 .cases-items-more{
     width: 190px;
@@ -4150,14 +3990,14 @@ form.success textarea{
     align-items: center;
     background: #6E1866;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     font-size: 14px;
-    font-family: 'Avenir Next Cyr Medium';
+    font-weight: 450;
     color: #FFFFFF;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    display: none;
+    cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
     .cases-items-more:hover{
@@ -4241,7 +4081,6 @@ form.success textarea{
 
 /*Кейс*/
 .case{
-    font-family: Avenir Next Cyr;
     max-width: 1240px;
     padding: 0 20px;
     margin: 60px auto 50px;
@@ -4314,6 +4153,10 @@ form.success textarea{
     font-size: 16px;
     color: #6E1866;
 }
+.case-content-row__title{
+    font-size: 16px;
+    margin: 0;
+}
 .case-content-text{
     display: -webkit-flex;
     display: -moz-flex;
@@ -4374,7 +4217,7 @@ form.success textarea{
 @media screen and (max-width: 1023px) {
     .case-content-text-col50{
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         padding-right: 0;
     }
     .case-content-text-col50:last-child{
@@ -4383,13 +4226,418 @@ form.success textarea{
     .case-content-text-col50 .case-content-text__main,
     .case-content-text-col100 .case-content-text__main{
         max-width: none;
+        font-size: 14px
     }
     .case-content img,
     .case-content-text{
-        margin-bottom: 70px;
+        margin-bottom: 50px;
     }
     .case-content-row{
         margin-bottom: 40px;
     }
+    .case-content-text__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .case-tags{
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        overflow-x: scroll;
+        margin-left: -20px;
+        padding-left: 20px;
+        width: calc(100% + 40px);
+    }
+    .case-tags::-webkit-scrollbar {
+        width: 0
+    }
+}
+@media screen and (max-width:767px) {
+    .case-head{
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+    }
+    .case-head .title{
+        margin-bottom: 10px;
+    }
+}
+.case-bottom{
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.case-bottom-progress{
+    width: 100%;
+    background: #C2C2C2;
+    height: 3px;
+    display: block;
+    z-index: 9999;
+}
+.case-bottom-progress-bar{
+    background: #6E1866;
+    width: 0%;
+    display: block;
+    height: inherit;
+}
+.case-bottom-content{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 5px 5px 0px 0px;
+    padding: 0 20px;
+}
+.case-bottom-content-col{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+.case-bottom-content__back,
+.case-bottom-content__forward,
+.case-bottom-content__like{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    cursor: pointer;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 20px 14px;
+    transition: .3s;
+    font-size: 14px
+}
+@media screen and (min-width: 1200px) {
+    .case-bottom-content__back:hover,
+    .case-bottom-content__forward:hover,
+    .case-bottom-content__like:hover{
+        background: #e0e0e0;
+    }
+}
+.case-bottom-content__back svg{
+    margin-right: 10px;
+}
+.case-bottom-content__forward svg{
+    margin-left: 10px;
+}
+.case-bottom-content__like{
+    margin-right: 30px;
+}
+.case-bottom-content__like.active svg path{
+    fill: #BE0A0A;
+    stroke: #BE0A0A;
+}
+.case-bottom-content__like svg{
+    margin-right: 10px;
+    transition: .3s;
+}
+.case-bottom-content__btn{
+    border: 1px solid #6E1866;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 142px;
+    height: 30px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: 14px;
+    color: #6E1866;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+    .case-bottom-content__btn:hover{
+        background: #6E1866;
+        color: #fff;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+    }
+    .case-bottom-content__btn:active{
+        -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+    }
+}
+@media screen and (max-width: 767px) {
+    .case-bottom-content__btn{
+        display: none;
+    }
+    .case-bottom-content__like{
+        margin-right: 0;
+    }
+    .case-bottom-content__back,
+    .case-bottom-content__forward, 
+    .case-bottom-content__like{
+        padding: 20px;
+    }
+    .case-bottom-content{
+        padding: 0;
+    }
+    .case-bottom-content__back{
+        padding-right: 14px;
+    }
+    .case-bottom-content__forward{
+        padding-left: 14px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .footer{
+        padding: 20px 10px;
+    }
+    .case{
+        padding: 0 10px;
+    }
 }
 /*Кейс Конец*/
+
+._show_1e.wrap_mW{
+	z-index: 9999!important;
+}
+.wrap_mW{
+    bottom: 60px!important;
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-box {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-content {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-arrow-border{
+    
+}
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-arrow-background{
+    border-top-color: #fff;
+    border-width: 13px;
+    left: -3px;
+}
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-arrow{
+    bottom: -1px;
+}
+
+
+/*Блог подробная*/
+.blogpage-banner{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+}
+.blogpage-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blogpage-content{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.blogpage-content-side{
+	flex: 1;
+	padding: 10px 20px;
+}
+.blogpage-content-main{
+	flex: 0 0 690px;
+}
+.blogpage-content-side-info{
+	position: sticky;
+  	position: -webkit-sticky;
+	top: 50px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+}
+.blogpage-content-side-info__ava{
+	margin-bottom: 15px;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.blogpage-content-side-info__ava img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+.blogpage-content-side-info__name{
+	font-weight: 450;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.blogpage-content-side-info__date,
+.blogpage-content-side-info__time{
+	color: rgba(0, 0, 0, 0.75);
+	margin-bottom: 30px;
+}
+.blogpage-content-side-info__tags{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.blogpage-content-side-info__tags span{
+	color: rgba(110, 24, 102, 0.75);
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.blogpage-content-main__text{
+	font-size: 18px;
+	line-height: 22px;
+	color: rgba(0, 0, 0, 0.75);
+	margin-bottom: 40px;
+}
+.blogpage-content-main__subtitle{
+	font-weight: 450;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.blogpage-content-main__img{
+    margin-bottom: 40px;
+}
+.blogpage-content-main__img img{
+    width: 100%;
+    height: auto;
+}
+.blogpage-content-main__sign{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    margin-top: 5px;
+}
+.blogpage-content-main__video{
+    margin-bottom: 40px;
+}
+.blogpage-content-main-quote{
+    padding: 20px;
+    background: rgba(110, 24, 102, 0.05);
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.blogpage-content-main-quote__text{
+    font-size: 18px;
+    line-height: 27px;
+    color: rgba(0, 0, 0, 0.75);
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-family: 'Lora', serif;
+}
+.blogpage-content-main-quote-bot{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+.blogpage-content-main-quote-bot__ava{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.blogpage-content-main-quote-bot__ava img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blogpage-content-main-quote-bot-content__name{
+    font-weight: 450;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.blogpage-content-main-quote-bot-content__post{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.blogpage-content-main-info{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(110, 24, 102, 0.75);
+}
+.blogpage-content-main-info span{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.blogpage-content-main-info .blogpage-content-main-info__date{
+    color: rgba(0, 0, 0, 0.75);
+    margin-right: 40px;
+}
+.blogpage-content-main-question{
+    padding: 20px;
+    background: rgba(110, 24, 102, 0.05);
+    border-radius: 5px;
+}
+/*Блог подробная Конец*/
+
+.textpage{
+    max-width: 970px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 30px auto 50px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
