@@ -147,6 +147,7 @@ break;
                                 array(
                                     'HIDE_FIELD_NAME' => $arParams['HIDE_FIELD_NAME'],
                                     'INPUT_NAME' => $arField['CODE'],
+                                    "TITLE"=> $arField['TITLE'],
                                     'INPUT_TITLE' => $arField['TITLE'],
                                     'INPUT_NAME_UNSAVED' => $arField['CODE'],
                                     'MAX_FILE_SIZE' => $arField['FILE_MAX_SIZE'],//'20971520', //20Mb

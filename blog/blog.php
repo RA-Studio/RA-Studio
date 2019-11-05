@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("blog");
 		<div class="blogpage-content-main">
 			<h1 class="title">Как быть разработчиком и пидором</h1>
 			<div class="blogpage-content-main__text">
-				Какого размера должны быть шрифты? И что насчет вертикального ритма?<br/><br/>Я собираюсь детально описать процесс, чтобы ответить на все подобные вопросы, сокращая затраты времени на выработку выдержанной типографики, соответствующей вашей сеточной системе и минимизирующей конфликты в дизайне.<br/><br/>Гармоничная типографическая и сеточная система внутренне непротиворечива. Такие системы помогают убедиться, что все макеты и компоненты соответствуют друг другу, по аналогии с конструктором – любой кирпичик Lego совместим с другим кирпичиком Lego.
+				Какого размера должны быть шрифты? И что насчет вертикального ритма?<br/><br/>Я собираюсь детально описать процесс, чтобы ответить на все подобные вопросы, сокращая затраты времени на выработку выдержанной типографики, соответствующей вашей сеточной системе и минимизирующей конфликты в дизайне.<br/><br/>Гармоничная типографическая и сеточная система внутренне непротиворечива. Такие системы помогают убедиться, что все макеты и компоненты соответствуют друг другу, по аналогии с конструктором – любой кирпичик Lego совместим с другим кирпичиком <span class="blogpage-bescription" data-title="LEGO Group" data-content="Датская частная компания, занимающаяся производством одноимённых серий развивающих игрушек, представляющих собой наборы деталей для сборки и моделирования разнообразных предметов — конструкторов. Второй по величине производитель игрушек в мире. Головной офис компании находится в Дании">Lego</span><span class="blogpage-bescription" data-title="LEGO" data-content="Датсвеличине производитель игрушек в мире. Головной офис компании находится в Дании">Lego</span>.
 			</div>
 			<div class="blogpage-content-main__subtitle">Почему это важно</div>
 			<div class="blogpage-content-main__text">При дизайне нового продукта или интерфейса с нуля, есть множество взаимозависимых решений, которые вам предстоит принять. Любое дизайн-решение влияет на предыдущее дизайн-решение, и некоторые такие связи более разрушительны, чем другие.<br/><br/>Аналогия: представьте, что вы строите дом, и прервали процесс покраски, чтобы передвинуть некоторые стены. То, что было относительно легко сделать во время начальной проектировки, становится в последствии чрезмерно дорогой затеей. Следуя правильной последовательности, вы сможете избежать подобных проблем.</div>
@@ -64,10 +64,30 @@ $APPLICATION->SetTitle("blog");
 				<span>#пидор</span>
 			</div>
 			<div class="blogpage-content-main-question">
-				
+				<div class="blogpage-content-main-question-info">
+					<div class="blogpage-content-main-question-info__ava">
+						<img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
+					</div>
+					<div class="blogpage-content-main-question-info-content">
+						<div class="blogpage-content-main-question-info-content-top">
+							<div class="blogpage-content-main-question-info-content-top__name">Илюха Капустин</div>
+							<div class="blogpage-content-main-question-info-content-top__span">Автор материала</div>
+						</div>
+						<div class="blogpage-content-main-question-info-content__title">Как Вы считаете, быть разработчиком и пидором это хорошо?</div>
+					</div>
+				</div>
+				<form class="blogpage-content-main-question-main">
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+					<button>Отправить</button>
+				</form>
 			</div>
 		</div>
-		<div class="blogpage-content-side"></div>
+		<div class="blogpage-content-side">
+			<div class="blogpage-content-side-descr">
+				<div class="blogpage-content-side-descr__title"></div>
+				<div class="blogpage-content-side-descr__content"></div>
+			</div>
+		</div>
 	</div>
 </div>
 

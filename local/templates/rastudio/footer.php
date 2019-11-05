@@ -183,6 +183,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	),
 	false
 );?>
+<?/*
 <form class="popup-cookie-form" id="CookieForm" action="../php/callBack.php" style="display: none">
     <svg xmlns="http://www.w3.org/2000/svg" width="548" height="382" viewBox="0 0 548 382" fill="none">
         <path d="M54.8279 65.6506C69.623 65.6506 81.6168 53.6568 81.6168 38.8618C81.6168 24.0667 69.623 12.0729 54.8279 12.0729C40.0328 12.0729 28.0391 24.0667 28.0391 38.8618C28.0391 53.6568 40.0328 65.6506 54.8279 65.6506Z" fill="#6E1866"/>
@@ -403,5 +404,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <button type="submit">Связаться</button>
     </div>
 </form>
+*/?>
 </body>
 </html>
