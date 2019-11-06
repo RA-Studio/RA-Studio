@@ -28,7 +28,7 @@ $this->setFrameMode(true);
                     <img src="<?=CFile::GetPath($arItem['PROPERTIES']['UF_PREVIEW_PICTURE']['VALUE'])?>" alt="<?=$arItem['PROPERTIES']['UF_PREVIEW_PICTURE']['DESCRIPTION']?>">
                 </a>
             <?}else{?>
-                <div class="main-vacancy-items-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>" data-aos="fade-up">
+                <div class="main-vacancy-items-item disabled" id="<?=$this->GetEditAreaId($arItem['ID']);?>" data-aos="fade-up">
                     <div class="main-vacancy-items-item__text"><?=$arItem['PROPERTIES']['UF_TAGS']['VALUE']?></div>
                     <div class="main-vacancy-items-item__title"><?=$arItem['NAME']?></div>
                     <div class="main-vacancy-items-item__btn">Подробнее</div>
