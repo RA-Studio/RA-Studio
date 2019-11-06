@@ -23,7 +23,7 @@ $this->setFrameMode(true);
             <?foreach($arResult["ITEMS"] as $key=>$arItem):?>
                 <?$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))); ?>
-                <?if(!empty($arItem['ACTIVE_FROM'])){?>
+                <?if($arItem['ACTIVE']=="Y"){?>
                     <a class="main-vacancy-items-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>" href="<?=$arItem["DETAIL_PAGE_URL"]?>" data-aos="fade-up">
                         <div class="main-vacancy-items-item__text"><?=$arItem['PROPERTIES']['UF_TAGS']['VALUE']?></div>
                         <div class="main-vacancy-items-item__title"><?=$arItem['NAME']?></div>
