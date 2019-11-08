@@ -77,8 +77,14 @@ $APPLICATION->SetTitle("blog");
 					</div>
 				</div>
 				<form class="blogpage-content-main-question-main">
-					<textarea name="" id="" cols="30" rows="10"></textarea>
+					<textarea name="" id="" rows="1" oninput="auto_grow(this)"></textarea>
 					<button>Отправить</button>
+					<script>
+						function auto_grow(element) {
+				            element.style.height = "5px";
+				            element.style.height = (element.scrollHeight)+"px";
+				        }
+					</script>
 				</form>
 			</div>
 		</div>
@@ -89,6 +95,37 @@ $APPLICATION->SetTitle("blog");
 			</div>
 		</div>
 	</div>
+	<div class="case-bottom">
+        <div class="case-bottom-content">
+            <div class="case-bottom-content-col">
+                <a href="/projects/gk-sails/" class="case-bottom-content__forward case-tooltip" title="Вперёд">
+                    Вперед
+                    <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L4 4.5L1 8" stroke="black" stroke-opacity="0.75"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="case-bottom-content__time">Время чтения: 7 минут</div>
+			<div class="case-bottom-content-col">
+                <div data-entity="like" data-id="18" class="case-bottom-content__like ">
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.07186 5.73684C1.8604 10.4737 8.96659 16 8.96659 16C8.96659 16 16.0719 10.4737 16.8613 5.73684C17.1209 4.17938 16.8613 1 12.914 1C10.506 1 8.96659 4.15789 8.96659 4.15789C8.96659 4.15789 7.38765 1 5.01923 1C1.07186 1 0.812577 4.17933 1.07186 5.73684Z" stroke="black" stroke-opacity="0.75"></path>
+                    </svg>
+                    11
+                </div>
+                <div class="case-bottom-content__looks">
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 1C3.14883 1 1 7 1 7C1 7 3.14883 13 9 13C14.8512 13 17 7 17 7C17 7 14.8512 1 9 1Z" stroke="black" stroke-opacity="0.75" stroke-linejoin="round"/>
+						<path d="M11.5 7C11.5 8.38071 10.3807 9.5 9 9.5C7.61929 9.5 6.5 8.38071 6.5 7C6.5 5.61929 7.61929 4.5 9 4.5C10.3807 4.5 11.5 5.61929 11.5 7Z" stroke="black" stroke-opacity="0.75"/>
+					</svg>
+                    112
+                </div>
+            </div>
+        </div>
+        <div class="case-bottom-progress">
+            <span class="case-bottom-progress-bar"></span>
+        </div>
+    </div>
 </div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

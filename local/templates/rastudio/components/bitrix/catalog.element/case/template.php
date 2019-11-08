@@ -186,7 +186,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 if ($ar_fields = $res->GetNextElement()){
                     $item=$ar_fields->GetFields();
                     ?>
-                    <a data-nolink href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__back case-tooltip" title="<?=$item['NAME']?>">
+                    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__back case-tooltip" title="<?=$item['NAME']?>">
                         <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 1L1 4.5L4 8" stroke="black" stroke-opacity="0.75"/>
                         </svg>
@@ -203,7 +203,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 if ($ar_fields = $res->GetNextElement()){
                     $item=$ar_fields->GetFields();
                     ?>
-                    <a data-nolink href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__forward case-tooltip" title="<?=$item['NAME']?>">
+                    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__forward case-tooltip" title="<?=$item['NAME']?>">
                         Вперед
                         <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L4 4.5L1 8" stroke="black" stroke-opacity="0.75"/>
@@ -247,7 +247,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                     <?=$likes?>
                 </div>
 
-                <a data-nolink class="case-bottom-content__btn fancybox-btn-init" data-fancybox="" data-options="{&quot;src&quot;: &quot;#SendForm&quot;, &quot;touch&quot;: false}" title="Обсудить проект" href="javascript:;">Сделать заказ</a>
+                <a data-nolink class="case-bottom-content__btn fancybox-btn-init" data-fancybox="" data-options="{&quot;src&quot;: &quot;#ProjectForm&quot;, &quot;touch&quot;: false}" title="Обсудить проект" href="javascript:;">Сделать заказ</a>
             </div>
             <?if($_POST['LIKE']=='Y'){
                 die() ;
