@@ -6,6 +6,16 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <head>
     <meta charset="utf-8">
     <title><?$APPLICATION->ShowTitle()?></title>
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<?=SITE_NAME?>">
+    <meta property="og:title" content="<?=$APPLICATION->ShowTitle()?>">
+    <meta property="og:description" content="<?=$APPLICATION->ShowProperty('description')?>">
+    <meta property="og:url" content="<?=SITE_LINK?>">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="<?=SITE_TEMPLATE_PATH?>/assets/images/preview.png">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ie=edge" http-equiv="x-ua-compatible"><?
     $APPLICATION->ShowMeta("robots");
@@ -26,10 +36,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/scripts/fancybox/jquery.fancybox.min.css');
     //$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/scripts/sumoselect/sumoselect.min.css');
     if(CSite::InDir('/index.php'))$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/scripts/aos-master/dist/aos.css');
-    if(CSite::InDir('/projects/') && !CSite::InDir('/projects/index.php'))$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/scripts/tooltipster/tooltipster.bundle.min.css');
+    if((CSite::InDir('/projects/') && !CSite::InDir('/projects/index.php')) || (CSite::InDir('/blog/') && !CSite::InDir('/blog/index.php')))$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/scripts/tooltipster/tooltipster.bundle.min.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/styles/app.min.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/jivosite/jivosite.css');
     ?>
+
 
     <!--JS-->
     <?
@@ -53,7 +64,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/scripts/TweenMax.min.js");
         $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/scripts/scripts-cases.js");
     }
-    if(CSite::InDir('/projects/') && !CSite::InDir('/cases/index.php')){
+    if((CSite::InDir('/projects/') && !CSite::InDir('/projects/index.php')) || (CSite::InDir('/blog/') && !CSite::InDir('/blog/index.php'))){
         $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/scripts/tooltipster/tooltipster.bundle.min.js");
         $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/scripts/script-progressbar.js");
         $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/scripts/script-tooltips-init.js");

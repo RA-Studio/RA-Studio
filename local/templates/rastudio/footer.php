@@ -89,6 +89,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"REQUIRED_FIELDS" => array(
 			0 => "TITLE",
 			1 => "PHONE",
+			2 => "MESSAGE",
 		),
 		"FIELDS_ORDER" => "TITLE,PHONE,MESSAGE",
 		"FORM_AUTOCOMPLETE" => "Y",
@@ -118,8 +119,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"CATEGORY_TITLE_VALIDATION_MESSAGE" => "Обязательное поле",
 		"CATEGORY_TITLE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
 		"CATEGORY_EMAIL_TITLE" => "E-mail",
-		"CATEGORY_EMAIL_TYPE" => "text",
-		"CATEGORY_EMAIL_PLACEHOLDER" => "E-mail",
+		"CATEGORY_EMAIL_TYPE" => "email",
+		"CATEGORY_EMAIL_PLACEHOLDER" => "",
 		"CATEGORY_EMAIL_VALUE" => "",
 		"CATEGORY_EMAIL_VALIDATION_MESSAGE" => "Обязательное поле",
 		"CATEGORY_EMAIL_VALIDATION_ADDITIONALLY_MESSAGE" => "data-bv-emailaddress-message=\"E-mail введен некорректно\"",
@@ -179,10 +180,31 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"COMPOSITE_FRAME_MODE" => "A",
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
 		"CLEAR_FORM" => "N",
-		"TITLE_SHOW_MODAL" => "Спасибо!"
+		"TITLE_SHOW_MODAL" => "Спасибо!",
+		"CATEGORY_EMAIL_CLASS" => "general-itemInput_half",
+		"CATEGORY_COMPANY_TITLE" => "Компания",
+		"CATEGORY_COMPANY_TYPE" => "text",
+		"CATEGORY_COMPANY_PLACEHOLDER" => "",
+		"CATEGORY_COMPANY_CLASS" => "general-itemInput_half",
+		"CATEGORY_COMPANY_VALUE" => "",
+		"CATEGORY_DIRECTION_TITLE" => "Направление разработки",
+		"CATEGORY_DIRECTION_TYPE" => "radio",
+		"CATEGORY_DIRECTION_CLASS" => "general-itemInput",
+		"CATEGORY_DIRECTION_VALUE" => array(
+			0 => "Интернет-магазин",
+			1 => "Лендинг",
+			2 => "Сервис",
+			3 => "",
+		),
+		"CATEGORY_DIRECTION_SHOW_INLINE" => "Y"
 	),
 	false
 );?>
+
+
+
+
+
 <?/*
 <form class="popup-cookie-form" id="CookieForm" action="../php/callBack.php" style="display: none">
     <svg xmlns="http://www.w3.org/2000/svg" width="548" height="382" viewBox="0 0 548 382" fill="none">

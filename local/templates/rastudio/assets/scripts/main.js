@@ -53,20 +53,33 @@ $(document).ready(function () {
 
 
 	/*Кнопка наверх*/
-	if ($(this).scrollTop() > 150) {
+	if ($(this).scrollTop() > 500) {
         $(document).find('.toTop').show().css('display','flex');
     };
     $('.toTop').click(function() {
 	    $('body,html').animate({scrollTop:0},500);
 	});
 	$(document).on('scroll', function (e) {
-		if ($(document).scrollTop() > 150) {
-	        $(document).find('.toTop').css('display','flex');
-	    } else {
-	        $(document).find('.toTop').hide();
-	    }
+		if ($(document).scrollTop() > 500) {
+			$(document).find('.toTop').css('display','flex');
+		} else {
+			$(document).find('.toTop').hide();
+		}
 	});
 	/*Кнопка наверх Конец*/
+
+
+	/*Анимация писем на форме*/
+	$(document).on('scroll', function (e) {
+		if($('.main-project-content-left').length){
+			if($(document).scrollTop() + $(window).height() - 300 > $('.main-project-content-left').offset().top ){
+				if(!$('.main-project-content-left').hasClass('main-project-content-left_hello')){
+					$('.main-project-content-left').addClass('main-project-content-left_hello');
+				}
+			}
+		}
+	});
+	/*Анимация писем на форме Конец*/
 
 
 	/*Хедер*/

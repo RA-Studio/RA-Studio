@@ -123,20 +123,21 @@ break;
             break;
         case 'radio':
             ?>
-            <div class="general-btnBlock__title <?= $arField['CLASS'] ?>"><?= $arField['TITLE'] ?></div>
-            <div class="general-btnBlock-wrap"><?
-                foreach ($arField['VALUE'] as $key => $arVal) {
-                    if (!empty($arVal)) {
-                        ?>
-                        <input type="<?= $arField['TYPE'] ?>" name="<?= $arField['NAME'] ?>"
-                               value="<?= $arVal ?>" <?=$arField['REQUIRED']?'data-required':''?> id="<?= $arField['ID'] . $key ?>"
-                               class="general-btnBlock__check">
-                        <label class="general-btnBlock__label" for="<?= $arField['ID'] . $key ?>"><?= $arVal ?></label>
-                    <?
+
+                <div class="general-btnBlock__title"><?=$arField['TITLE'] ?></div>
+                <div class="general-btnBlock-wrap"><?
+                    foreach ($arField['VALUE'] as $key => $arVal) {
+                        if (!empty($arVal)) {
+                            ?>
+                            <input type="<?= $arField['TYPE'] ?>" name="<?= $arField['NAME'] ?>"
+                                   value="<?= $arVal ?>" <?=$arField['REQUIRED']?'data-required':''?> id="<?= $arField['ID'] . $key ?>"
+                                   class="general-btnBlock__check">
+                            <label class="general-btnBlock__label" for="<?= $arField['ID'] . $key ?>"><?= $arVal ?></label>
+                        <?
+                        }
                     }
-                }
-                ?></div>
-            </div>
+                    ?>
+                </div>
             <?
             break;
         case 'file':?>

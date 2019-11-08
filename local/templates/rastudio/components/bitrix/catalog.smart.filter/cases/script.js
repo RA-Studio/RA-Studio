@@ -213,7 +213,6 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache)
 				$.get(BX.util.htmlspecialcharsback(result.FILTER_AJAX_URL), { "AJAX_MODE" : "Y"}).done((data) => {
 					$('.cases').html($(data).find('.cases').html());
 				});
-
 				/*if (modef.style.display === 'none')
 				{
 					modef.style.display = 'inline-block';

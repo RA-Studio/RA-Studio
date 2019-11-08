@@ -377,7 +377,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                 $vacancyFilter = array(
                 "ACTIVE" => array("Y", "N")
                 );?>
-                <?$APPLICATION->IncludeComponent(
+                <?/*$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"vacancyMain", 
 	array(
@@ -446,7 +446,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 		"COMPOSITE_FRAME_TYPE" => "AUTO"
 	),
 	false
-);?>
+);*/?>
                 <div class="main-adv">
                     <div class="main-adv__subtitle">Работа с нами</div>
                     <h2 class="main-adv__title">Преимущества</h2>
@@ -461,98 +461,124 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                     </div>
                 </div>
                 <div class="main-project" data-aos="fade-down" data-aos-delay="300">
-                    <div class="main-project__title">Начать проект</div>
                     <div class="main-project-content">
-                        <div class="main-project-content-left"><svg width="464" height="368" viewBox="0 0 464 368" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M128.285 186.841L0 225.084L23.5028 303.923L151.788 265.679L128.285 186.841Z" fill="url(#paint0_linear)"/>
-                                <path d="M126.093 189.624L2.15625 226.571L24.0908 300.149L148.027 263.202L126.093 189.624Z" fill="white"/>
-                                <g opacity="0.6">
-                                    <path opacity="0.6" d="M12.7084 242.218L28.4751 237.518L24.9966 225.849L9.22992 230.55L12.7084 242.218Z" fill="#F55F44"/>
-                                    <path opacity="0.6" d="M32.4084 261.064L92.957 243.013L91.8295 239.231L31.2808 257.281L32.4084 261.064Z" fill="#F55F44"/>
-                                    <path opacity="0.6" d="M51.2525 264.369L95.4023 251.208L94.6501 248.684L50.5003 261.846L51.2525 264.369Z" fill="#F55F44"/>
-                                </g>
-                                <path d="M328.192 9.80094e-05L312.467 80.7505L443.862 106.339L459.588 25.5884L328.192 9.80094e-05Z" fill="url(#paint1_linear)"/>
-                                <path d="M329.411 2.32632L314.734 77.6885L441.676 102.409L456.353 27.0473L329.411 2.32632Z" fill="white"/>
-                                <g opacity="0.6">
-                                    <path opacity="0.6" d="M331.456 21.0821L347.605 24.2271L349.933 12.2758L333.784 9.13092L331.456 21.0821Z" fill="#F55F44"/>
-                                    <path opacity="0.6" d="M340.174 46.9212L402.19 58.9985L402.945 55.1244L340.928 43.0471L340.174 46.9212Z" fill="#F55F44"/>
-                                    <path opacity="0.6" d="M355.337 58.5931L400.558 67.3994L401.061 64.8149L355.841 56.0086L355.337 58.5931Z" fill="#F55F44"/>
-                                </g>
-                                <path d="M409.903 159.438L334.431 192.176L387.702 314.984L463.174 282.245L409.903 159.438Z" fill="url(#paint2_linear)"/>
-                                <path d="M408.672 161.758L338.235 192.312L389.701 310.957L460.137 280.404L408.672 161.758Z" fill="white"/>
-                                <g opacity="0.6">
-                                    <path opacity="0.6" d="M394.353 174.081L400.9 189.174L412.071 184.329L405.523 169.235L394.353 174.081Z" fill="#47E6B1"/>
-                                    <path opacity="0.6" d="M377.983 195.886L403.126 253.85L406.747 252.279L381.604 194.315L377.983 195.886Z" fill="#47E6B1"/>
-                                    <path opacity="0.6" d="M376.945 214.987L395.278 257.251L397.694 256.204L379.36 213.939L376.945 214.987Z" fill="#47E6B1"/>
-                                </g>
-                                <path d="M161.899 0.57492L35.7363 45.3257L63.2383 122.86L189.401 78.1091L161.899 0.57492Z" fill="url(#paint3_linear)"/>
-                                <path d="M159.855 3.47553L37.9688 46.7095L63.6356 119.07L185.522 75.8361L159.855 3.47553Z" fill="white"/>
-                                <g opacity="0.6">
-                                    <path opacity="0.6" d="M49.2681 61.8257L64.7739 56.3257L60.7036 44.8505L45.1977 50.3505L49.2681 61.8257Z" fill="#6E1866"/>
-                                    <path opacity="0.6" d="M69.9053 79.6486L129.452 58.5269L128.133 54.8071L68.5859 75.9288L69.9053 79.6486Z" fill="#6E1866"/>
-                                    <path opacity="0.6" d="M88.8922 81.9871L132.312 66.5859L131.431 64.1044L88.012 79.5056L88.8922 81.9871Z" fill="#6E1866"/>
-                                </g>
-                                <path d="M231.755 4.89697L75.9009 151.618V367.669H387.603V151.618L231.755 4.89697Z" fill="url(#paint4_linear)"/>
-                                <path d="M386.023 362.929H77.481V151.266L231.755 7.52979L386.023 151.266V362.929Z" fill="white"/>
-                                <path d="M339.16 37.0142H124.343V289.742H339.16V37.0142Z" fill="url(#paint5_linear)"/>
-                                <path d="M336.447 39.1206H127.056V289.742H336.447V39.1206Z" fill="white"/>
-                                <path d="M77.481 151.266L231.755 257.098L77.481 362.929V151.266Z" fill="#F5F5F5"/>
-                                <path d="M386.023 151.266L231.755 257.098L386.023 362.929V151.266Z" fill="#F5F5F5"/>
-                                <path d="M77.481 362.924L225.696 247.608C227.421 246.25 229.552 245.512 231.747 245.512C233.942 245.512 236.073 246.25 237.797 247.608L386.023 362.924H77.481Z" fill="url(#paint6_linear)"/>
-                                <path d="M77.481 362.924L225.696 252.646C227.445 251.345 229.567 250.642 231.747 250.642C233.927 250.642 236.048 251.345 237.797 252.646L386.023 362.924H77.481Z" fill="white"/>
-                                <path d="M202.531 87.5576H158.828V94.9301H202.531V87.5576Z" fill="#47E6B1"/>
-                                <path d="M304.676 107.042H158.828V114.414H304.676V107.042Z" fill="#F5F5F5"/>
-                                <path d="M304.676 119.675H158.828V127.048H304.676V119.675Z" fill="#F5F5F5"/>
-                                <path d="M304.676 132.314H158.828V139.686H304.676V132.314Z" fill="#F5F5F5"/>
-                                <path d="M304.676 144.947H158.828V152.319H304.676V144.947Z" fill="#F5F5F5"/>
-                                <path d="M225.17 157.585H158.828V164.958H225.17V157.585Z" fill="#F5F5F5"/>
-                                <path d="M304.676 157.585H238.335V164.958H304.676V157.585Z" fill="#6E1866"/>
+                        <div class="main-project-content-left">
+                            <svg width="436" height="508" viewBox="0 0 436 508" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M217.783 0.84082L0.0407715 205.824V507.668H435.519V205.824L217.783 0.84082Z" fill="url(#paint0_linear)"/>
+                                <path d="M433.311 501.047H2.24792V205.333L217.783 4.51953L433.311 205.333V501.047Z" fill="white"/>
+                                <path d="M367.84 45.7119H67.7195V398.797H367.84V45.7119Z" fill="url(#paint0_linear)"/>
+                                <path d="M364.05 48.6562H71.5094V398.798H364.05V48.6562Z" fill="white"/>
+                                <path d="M2.24792 205.334L217.783 353.191L2.24792 501.048V205.334Z" fill="#F5F5F5"/>
+                                <path d="M433.311 205.334L217.783 353.191L433.311 501.048V205.334Z" fill="#F5F5F5"/>
+                                <path d="M2.24792 501.04L209.319 339.933C211.728 338.036 214.706 337.005 217.772 337.005C220.839 337.005 223.816 338.036 226.226 339.933L433.311 501.04H2.24792Z" fill="url(#paint0_linear)"/>
+                                <path d="M2.24792 501.04L209.319 346.971C211.762 345.153 214.727 344.172 217.772 344.172C220.818 344.172 223.782 345.153 226.226 346.971L433.311 501.04H2.24792Z" fill="white"/>
+                                <path d="M176.955 116.326H115.898V126.626H176.955V116.326Z" fill="#47E6B1"/>
+                                <path d="M319.662 143.548H115.898V153.848H319.662V143.548Z" fill="#F5F5F5"/>
+                                <path d="M319.662 161.197H115.898V171.497H319.662V161.197Z" fill="#F5F5F5"/>
+                                <path d="M319.662 178.854H115.898V189.155H319.662V178.854Z" fill="#F5F5F5"/>
+                                <path d="M319.662 196.505H115.898V206.805H319.662V196.505Z" fill="#F5F5F5"/>
+                                <path d="M208.583 214.163H115.898V224.463H208.583V214.163Z" fill="#F5F5F5"/>
+                                <path d="M319.662 214.163H226.976V224.463H319.662V214.163Z" fill="#6E1866"/>
                                 <defs>
-                                    <linearGradient id="paint0_linear" x1="87.6452" y1="284.801" x2="64.1424" y2="205.962" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint1_linear" x1="9988.91" y1="23433.3" x2="13946.4" y2="3111.61" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint2_linear" x1="-47820.7" y1="42611.3" x2="-28827.3" y2="34372.4" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint3_linear" x1="-1333.52" y1="20313.7" x2="-5586.98" y2="8322.22" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint4_linear" x1="135872" y1="250757" x2="135872" y2="3346.02" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint5_linear" x1="93711.7" y1="137700" x2="93711.7" y2="17624.3" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint6_linear" x1="185295" y1="92612" x2="185295" y2="66695.8" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#808080" stop-opacity="0.25"/>
-                                        <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
-                                        <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
-                                    </linearGradient>
+                                <linearGradient id="paint0_linear" x1="189720" y1="350325" x2="189720" y2="4668.72" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#808080" stop-opacity="0.25"/>
+                                <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
+                                <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg width="216" height="172" viewBox="0 0 216 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M177.188 0.80211L0.92688 63.3232L39.3498 171.646L215.611 109.125L177.188 0.80211Z" fill="url(#paint0_linear)"/>
+                                <path d="M174.333 4.85582L4.04639 65.2578L39.9055 166.353L210.192 105.951L174.333 4.85582Z" fill="white"/>
+                                <g opacity="0.6">
+                                <path opacity="0.6" d="M19.8321 86.3775L41.4952 78.6934L35.8086 62.6614L14.1454 70.3455L19.8321 86.3775Z" fill="#6E1866"/>
+                                <path opacity="0.6" d="M48.6643 111.278L131.857 81.7686L130.014 76.5716L46.8209 106.081L48.6643 111.278Z" fill="#6E1866"/>
+                                <path opacity="0.6" d="M75.1905 114.544L135.852 93.0273L134.622 89.5604L73.9608 111.077L75.1905 114.544Z" fill="#6E1866"/>
+                                </g>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="-1912.05" y1="28380.1" x2="-7854.55" y2="11626.9" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#808080" stop-opacity="0.25"/>
+                                <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
+                                <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg width="207" height="149" viewBox="0 0 207 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                <path d="M22.5164 -0.000646602L0.546265 112.815L184.119 148.565L206.089 35.7487L22.5164 -0.000646602Z" fill="url(#paint0_linear)"/>
+                                <path d="M24.2189 3.24989L3.71484 108.538L181.065 143.076L201.569 37.7875L24.2189 3.24989Z" fill="white"/>
+                                <path opacity="0.6" d="M27.0757 29.4539L49.6375 33.8477L52.8891 17.1506L30.3273 12.7569L27.0757 29.4539Z" fill="#F55F44"/>
+                                <path opacity="0.6" d="M39.2545 65.5536L125.898 82.4268L126.952 77.0143L40.3085 60.1411L39.2545 65.5536Z" fill="#F55F44"/>
+                                <path opacity="0.6" d="M60.4392 81.8608L123.616 94.1641L124.32 90.5533L61.1424 78.25L60.4392 81.8608Z" fill="#F55F44"/>
+                                </g>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="13519.5" y1="32738.5" x2="19048.5" y2="4347.22" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#808080" stop-opacity="0.25"/>
+                                <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
+                                <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg width="213" height="164" viewBox="0 0 213 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M179.226 0.0341915L0 53.4639L32.8357 163.609L212.062 110.179L179.226 0.0341915Z" fill="url(#paint0_linear)"/>
+                                <path d="M176.164 3.92135L3.01233 55.54L33.657 158.336L206.808 106.717L176.164 3.92135Z" fill="white"/>
+                                <g opacity="0.6">
+                                <path opacity="0.6" d="M17.7551 77.3997L39.7827 70.833L34.923 54.5313L12.8954 61.098L17.7551 77.3997Z" fill="#F55F44"/>
+                                <path opacity="0.6" d="M45.2783 103.73L129.871 78.5117L128.295 73.2274L43.703 98.4454L45.2783 103.73Z" fill="#F55F44"/>
+                                <path opacity="0.6" d="M71.605 108.348L133.287 89.96L132.236 86.4347L70.5541 104.823L71.605 108.348Z" fill="#F55F44"/>
+                                </g>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="122.449" y1="136.894" x2="89.6131" y2="26.749" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#808080" stop-opacity="0.25"/>
+                                <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
+                                <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg width="181" height="219" viewBox="0 0 181 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M105.675 0.748932L0.232544 46.4873L74.6572 218.062L180.1 172.323L105.675 0.748932Z" fill="url(#paint0_linear)"/>
+                                <path d="M103.954 3.99232L5.54761 46.6787L77.4497 212.438L175.856 169.751L103.954 3.99232Z" fill="white"/>
+                                <g opacity="0.6">
+                                <path opacity="0.6" d="M83.9487 21.2068L93.0958 42.2939L108.702 35.5246L99.5545 14.4374L83.9487 21.2068Z" fill="#47E6B1"/>
+                                <path opacity="0.6" d="M61.0787 51.6717L96.2061 132.652L101.265 130.458L66.1374 49.4773L61.0787 51.6717Z" fill="#47E6B1"/>
+                                <path opacity="0.6" d="M59.6288 78.3561L85.2424 137.404L88.6172 135.94L63.0036 76.8922L59.6288 78.3561Z" fill="#47E6B1"/>
+                                </g>
+                                <defs>
+                                <linearGradient id="paint0_linear" x1="-67277.2" y1="59310.1" x2="-40741.5" y2="47799.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#808080" stop-opacity="0.25"/>
+                                <stop offset="0.54" stop-color="#808080" stop-opacity="0.12"/>
+                                <stop offset="1" stop-color="#808080" stop-opacity="0.1"/>
+                                </linearGradient>
                                 </defs>
                             </svg>
                         </div>
-                        <?$APPLICATION->IncludeComponent(
+                        <div class="main-project-content-right">
+                            <div class="main-project-content-right__title">Оставьте заявку</div>
+                            <div class="main-project-content-right__subtitle">Или свяжитесь с нами по телефону<br> <a href="tel:<?$APPLICATION->IncludeFile(
+                                    SITE_TEMPLATE_PATH."/include/phone.php",
+                                    array(),
+                                    array(
+                                        "MODE" => "html",
+                                        "SHOW_BORDER" => false
+                                    )
+                                );?>"><?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        array(
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => SITE_TEMPLATE_PATH."/include/phone.php",
+                                            "EDIT_TEMPLATE" => ""
+                                        ),
+                                        false
+                                    );?></a></div>
+                            <?$APPLICATION->IncludeComponent(
 	"slam:easyform", 
 	"uniform", 
 	array(
 		"COMPONENT_TEMPLATE" => "uniform",
 		"FORM_ID" => "FORM10",
-		"FORM_NAME" => "Заполните короткий бриф",
+		"FORM_NAME" => "",
 		"WIDTH_FORM" => "main-project-content-form",
 		"DISPLAY_FIELDS" => array(
 			0 => "TITLE",
@@ -560,7 +586,8 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 			2 => "PHONE",
 			3 => "MESSAGE",
 			4 => "COMPANY",
-			5 => "",
+			5 => "DIRECTION",
+			6 => "",
 		),
 		"REQUIRED_FIELDS" => array(
 			0 => "TITLE",
@@ -568,8 +595,9 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 			2 => "PHONE",
 			3 => "MESSAGE",
 			4 => "COMPANY",
+			5 => "DIRECTION",
 		),
-		"FIELDS_ORDER" => "TITLE,EMAIL,PHONE,COMPANY,MESSAGE",
+		"FIELDS_ORDER" => "DIRECTION,TITLE,EMAIL,PHONE,COMPANY,MESSAGE",
 		"FORM_AUTOCOMPLETE" => "Y",
 		"HIDE_FIELD_NAME" => "N",
 		"HIDE_ASTERISK" => "Y",
@@ -668,10 +696,21 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 		"CATEGORY_PHONE_CLASS" => "general-itemInput_half",
 		"CATEGORY_MESSAGE_CLASS" => "",
 		"CATEGORY_COMPANY_CLASS" => "general-itemInput_half",
-		"CLEAR_FORM" => "N"
+		"CLEAR_FORM" => "N",
+		"CATEGORY_DIRECTION_TITLE" => "Направление разработки",
+		"CATEGORY_DIRECTION_TYPE" => "radio",
+		"CATEGORY_DIRECTION_CLASS" => "general-itemInput",
+		"CATEGORY_DIRECTION_VALUE" => array(
+			0 => "Интернет-магазин",
+			1 => "Лендинг",
+			2 => "Сервис",
+			3 => "",
+		),
+		"CATEGORY_DIRECTION_SHOW_INLINE" => "Y"
 	),
 	false
 );?>
+                        </div>
                     </div>
                 </div>
             </div>
