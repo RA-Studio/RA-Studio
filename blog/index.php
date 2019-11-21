@@ -252,6 +252,38 @@ $APPLICATION->SetTitle("Блог");
                 <input type="checkbox" id="3">
                 <label for="3">#дизайн</label>
             </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
+            <div class="blog-tags-item" for="3">
+                <input type="checkbox" id="3">
+                <label for="3">#дизайн</label>
+            </div>
         </div>
         <div class="blog-items">
             <div class="blog-items-item-wrap">
