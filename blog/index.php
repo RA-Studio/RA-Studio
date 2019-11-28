@@ -1,13 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("subtitle", "Самое интересное в блогах");
 $APPLICATION->SetPageProperty("TITLE", "Полезные статьи о разработке и продвижении сайтов от компании РА Студио.");
 $APPLICATION->SetPageProperty("description", "Мы расскажем, как правильно оптимизируются сайты, как выбрать подрядчика на создание сайтов и много полезной информации. Подводные камни при работе с веб-студиями. Что учитывать при разработке дизайна сайта.");
 $APPLICATION->SetTitle("Блог");
 ?>
-
-<?/*$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"cases", 
+	"blog",
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -213,146 +213,5 @@ $APPLICATION->SetTitle("Блог");
 		)
 	),
 	false
-);*/?>
-
-<div class="blog">
-    <div class="blog-main" style="background-color: #CFEFF1">
-        <div class="blog-main-wrap">
-            <div class="blog-main-col">
-                <h1 class="blog-main__title">Как менеджеру проектов управлять общением с клиентами</h1>
-                <div class="blog-main-bot">
-                    <div class="blog-main-bot-author">
-                        <div class="blog-main-bot-author__ava">
-                            <img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
-                        </div>
-                        <div class="blog-main-bot-author__name">Илья<br>Капустин</div>
-                    </div>
-                    <div class="blog-main-bot__date">14 сентября 2018 года</div>
-                    <div class="blog-main-bot__timeread">Время чтения: 7 минут</div>
-                    <div class="blog-main-bot__tags"><span>#управление</span></div>
-                </div>
-            </div>
-            <div class="blog-main-img">
-                <img src="/local/templates/rastudio/assets/images/blog1.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="blog-content">
-        <div class="blog-tags">
-            <div class="blog-tags-item active">Все статьи</div>
-            <div class="blog-tags-item" for="1">
-                <input type="checkbox" id="1">
-                <label for="1">#дизайн</label>
-            </div>
-            <div class="blog-tags-item" for="2">
-                <input type="checkbox" id="2">
-                <label for="2">#дизайн</label>
-            </div>
-            <div class="blog-tags-item" for="3">
-                <input type="checkbox" id="3">
-                <label for="3">#дизайн</label>
-            </div>
-        </div>
-        <div class="blog-items">
-            <div class="blog-items-item-wrap">
-                <a href="#" class="blog-items-item">
-                    <div class="blog-items-item__img" style="background-color: #F1CFCF">
-                        <img src="/local/templates/rastudio/assets/images/blog2.png" alt="">
-                    </div>
-                    <div class="blog-items-item-info">
-                        <div class="blog-items-item-info__title">Как менеджеру проектов управлять общением с клиентами</div>
-                        <div class="blog-items-item-info-bot">
-                            <div class="blog-items-item-info-bot-author">
-                                <div class="blog-items-item-info-bot-author__img">
-                                    <img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
-                                </div>
-                                Илья Капустин
-                            </div>
-                            <div class="blog-items-item-info-bot__time">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="7.5" cy="7.5" r="7" stroke="black" stroke-opacity="0.75"/>
-                                    <path d="M7.5 7.5V8H8V7.5H7.5ZM8 3C8 2.72386 7.77614 2.5 7.5 2.5C7.22386 2.5 7 2.72386 7 3H8ZM4.5 7C4.22386 7 4 7.22386 4 7.5C4 7.77614 4.22386 8 4.5 8V7ZM8 7.5V3H7V7.5H8ZM7.5 7H4.5V8H7.5V7Z" fill="black" fill-opacity="0.75"/>
-                                </svg>
-                                7 минут
-                            </div>
-                            <div class="blog-items-item-info-bot__looks">
-                                <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.5 0.5C2.74592 0.5 1 5.375 1 5.375C1 5.375 2.74592 10.25 7.5 10.25C12.2541 10.25 14 5.375 14 5.375C14 5.375 12.2541 0.5 7.5 0.5Z" stroke="black" stroke-opacity="0.75" stroke-linejoin="round"/>
-                                    <path d="M9.4375 5.375C9.4375 6.44505 8.57005 7.3125 7.5 7.3125C6.42995 7.3125 5.5625 6.44505 5.5625 5.375C5.5625 4.30495 6.42995 3.4375 7.5 3.4375C8.57005 3.4375 9.4375 4.30495 9.4375 5.375Z" stroke="black" stroke-opacity="0.75"/>
-                                </svg>
-                                123
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="blog-items-item-wrap">
-                <a href="#" class="blog-items-item">
-                    <div class="blog-items-item__img" style="background-color: #EEF1CF">
-                        <img src="/local/templates/rastudio/assets/images/blog3.png" alt="">
-                    </div>
-                    <div class="blog-items-item-info">
-                        <div class="blog-items-item-info__title">Как менеджеру проектов управлять общением с клиентами</div>
-                        <div class="blog-items-item-info-bot">
-                            <div class="blog-items-item-info-bot-author">
-                                <div class="blog-items-item-info-bot-author__img">
-                                    <img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
-                                </div>
-                                Илья Капустин
-                            </div>
-                            <div class="blog-items-item-info-bot__time">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="7.5" cy="7.5" r="7" stroke="black" stroke-opacity="0.75"/>
-                                    <path d="M7.5 7.5V8H8V7.5H7.5ZM8 3C8 2.72386 7.77614 2.5 7.5 2.5C7.22386 2.5 7 2.72386 7 3H8ZM4.5 7C4.22386 7 4 7.22386 4 7.5C4 7.77614 4.22386 8 4.5 8V7ZM8 7.5V3H7V7.5H8ZM7.5 7H4.5V8H7.5V7Z" fill="black" fill-opacity="0.75"/>
-                                </svg>
-                                7 минут
-                            </div>
-                            <div class="blog-items-item-info-bot__looks">
-                                <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.5 0.5C2.74592 0.5 1 5.375 1 5.375C1 5.375 2.74592 10.25 7.5 10.25C12.2541 10.25 14 5.375 14 5.375C14 5.375 12.2541 0.5 7.5 0.5Z" stroke="black" stroke-opacity="0.75" stroke-linejoin="round"/>
-                                    <path d="M9.4375 5.375C9.4375 6.44505 8.57005 7.3125 7.5 7.3125C6.42995 7.3125 5.5625 6.44505 5.5625 5.375C5.5625 4.30495 6.42995 3.4375 7.5 3.4375C8.57005 3.4375 9.4375 4.30495 9.4375 5.375Z" stroke="black" stroke-opacity="0.75"/>
-                                </svg>
-                                123
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="blog-items-item-wrap">
-                <a href="#" class="blog-items-item">
-                    <div class="blog-items-item__img" style="background-color: #CFD4F1">
-                        <img src="/local/templates/rastudio/assets/images/blog4.png" alt="">
-                    </div>
-                    <div class="blog-items-item-info">
-                        <div class="blog-items-item-info__title">Как менеджеру проектов управлять общением с клиентами</div>
-                        <div class="blog-items-item-info-bot">
-                            <div class="blog-items-item-info-bot-author">
-                                <div class="blog-items-item-info-bot-author__img">
-                                    <img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
-                                </div>
-                                Илья Капустин
-                            </div>
-                            <div class="blog-items-item-info-bot__time">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="7.5" cy="7.5" r="7" stroke="black" stroke-opacity="0.75"/>
-                                    <path d="M7.5 7.5V8H8V7.5H7.5ZM8 3C8 2.72386 7.77614 2.5 7.5 2.5C7.22386 2.5 7 2.72386 7 3H8ZM4.5 7C4.22386 7 4 7.22386 4 7.5C4 7.77614 4.22386 8 4.5 8V7ZM8 7.5V3H7V7.5H8ZM7.5 7H4.5V8H7.5V7Z" fill="black" fill-opacity="0.75"/>
-                                </svg>
-                                7 минут
-                            </div>
-                            <div class="blog-items-item-info-bot__looks">
-                                <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.5 0.5C2.74592 0.5 1 5.375 1 5.375C1 5.375 2.74592 10.25 7.5 10.25C12.2541 10.25 14 5.375 14 5.375C14 5.375 12.2541 0.5 7.5 0.5Z" stroke="black" stroke-opacity="0.75" stroke-linejoin="round"/>
-                                    <path d="M9.4375 5.375C9.4375 6.44505 8.57005 7.3125 7.5 7.3125C6.42995 7.3125 5.5625 6.44505 5.5625 5.375C5.5625 4.30495 6.42995 3.4375 7.5 3.4375C8.57005 3.4375 9.4375 4.30495 9.4375 5.375Z" stroke="black" stroke-opacity="0.75"/>
-                                </svg>
-                                123
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="blog-more">Показать еще</div>
-    </div>
-</div>
-
+);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

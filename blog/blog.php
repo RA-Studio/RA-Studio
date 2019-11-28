@@ -13,8 +13,10 @@ $APPLICATION->SetTitle("blog");
 				<div class="blogpage-content-side-info__ava">
 					<img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
 				</div>
-				<div class="blogpage-content-side-info__name">Илья Капустин</div>
-				<div class="blogpage-content-side-info__date">14 сентября 2018 года</div>
+                <div>
+                    <div class="blogpage-content-side-info__name">Илья Капустин</div>
+                    <div class="blogpage-content-side-info__date">14 сентября 2018 года</div>
+                </div>
 				<div class="blogpage-content-side-info__time">Время чтения: 7 минут</div>
 				<div class="blogpage-content-side-info__tags">
 					<span>#разработка</span>
@@ -25,7 +27,7 @@ $APPLICATION->SetTitle("blog");
 		<div class="blogpage-content-main">
 			<h1 class="title">Как быть разработчиком и пидором</h1>
 			<div class="blogpage-content-main__text">
-				Какого размера должны быть шрифты? И что насчет вертикального ритма?<br/><br/>Я собираюсь детально описать процесс, чтобы ответить на все подобные вопросы, сокращая затраты времени на выработку выдержанной типографики, соответствующей вашей сеточной системе и минимизирующей конфликты в дизайне.<br/><br/>Гармоничная типографическая и сеточная система внутренне непротиворечива. Такие системы помогают убедиться, что все макеты и компоненты соответствуют друг другу, по аналогии с конструктором – любой кирпичик Lego совместим с другим кирпичиком <span class="blogpage-bescription" data-title="LEGO Group" data-content="Датская частная компания, занимающаяся производством одноимённых серий развивающих игрушек, представляющих собой наборы деталей для сборки и моделирования разнообразных предметов — конструкторов. Второй по величине производитель игрушек в мире. Головной офис компании находится в Дании">Lego</span><span class="blogpage-bescription" data-title="LEGO" data-content="Датсвеличине производитель игрушек в мире. Головной офис компании находится в Дании">Lego</span>.
+				Какого размера должны быть шрифты? И что насчет вертикального ритма?<br/><br/>Я собираюсь детально описать процесс, чтобы ответить на все подобные вопросы, сокращая затраты времени на выработку выдержанной типографики, соответствующей вашей сеточной системе и минимизирующей конфликты в дизайне.<br/><br/>Гармоничная типографическая и сеточная система внутренне непротиворечива. Такие системы помогают убедиться, что все макеты и компоненты соответствуют друг другу, по аналогии с конструктором – любой кирпичик Lego совместим с другим кирпичиком Lego.
 			</div>
 			<div class="blogpage-content-main__subtitle">Почему это важно</div>
 			<div class="blogpage-content-main__text">При дизайне нового продукта или интерфейса с нуля, есть множество взаимозависимых решений, которые вам предстоит принять. Любое дизайн-решение влияет на предыдущее дизайн-решение, и некоторые такие связи более разрушительны, чем другие.<br/><br/>Аналогия: представьте, что вы строите дом, и прервали процесс покраски, чтобы передвинуть некоторые стены. То, что было относительно легко сделать во время начальной проектировки, становится в последствии чрезмерно дорогой затеей. Следуя правильной последовательности, вы сможете избежать подобных проблем.</div>
@@ -63,42 +65,32 @@ $APPLICATION->SetTitle("blog");
 				<span>#разработка</span>
 				<span>#пидор</span>
 			</div>
-			<div class="blogpage-content-main-question">
-				<div class="blogpage-content-main-question-info">
-					<div class="blogpage-content-main-question-info__ava">
-						<img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
-					</div>
-					<div class="blogpage-content-main-question-info-content">
-						<div class="blogpage-content-main-question-info-content-top">
-							<div class="blogpage-content-main-question-info-content-top__name">Илюха Капустин</div>
-							<div class="blogpage-content-main-question-info-content-top__span">Автор материала</div>
-						</div>
-						<div class="blogpage-content-main-question-info-content__title">Как Вы считаете, быть разработчиком и пидором это хорошо?</div>
-					</div>
-				</div>
-				<form class="blogpage-content-main-question-main">
-					<textarea name="" id="" rows="1" oninput="auto_grow(this)"></textarea>
-					<button>Отправить</button>
-					<script>
-						function auto_grow(element) {
-				            element.style.height = "5px";
-				            element.style.height = (element.scrollHeight)+"px";
-				        }
-					</script>
-				</form>
-			</div>
+            <div class="blogpage-content-main-question">
+                <div class="blogpage-content-main-question-info">
+                    <div class="blogpage-content-main-question-info__ava">
+                        <img src="/local/templates/rastudio/assets/images/blog-ava.jpg" alt="">
+                    </div>
+                    <div class="blogpage-content-main-question-info-content">
+                        <div class="blogpage-content-main-question-info-content-top">
+                            <div class="blogpage-content-main-question-info-content-top__name">Илюха Капустин</div>
+                            <div class="blogpage-content-main-question-info-content-top__span">Автор материала</div>
+                        </div>
+                        <div class="blogpage-content-main-question-info-content__title">Как Вы считаете, быть разработчиком и пидором это хорошо?</div>
+                    </div>
+                </div>
+                <form class="blogpage-content-main-question-main">
+                    <textarea name="" id="" rows="1" oninput="auto_grow(this)" placeholder="Расскажите свой гейский опыт"></textarea>
+                    <button>Отправить</button>
+
+                </form>
+            </div>
 		</div>
-		<div class="blogpage-content-side">
-			<div class="blogpage-content-side-descr">
-				<div class="blogpage-content-side-descr__title"></div>
-				<div class="blogpage-content-side-descr__content"></div>
-			</div>
-		</div>
+		<div class="blogpage-content-side"></div>
 	</div>
-	<div class="case-bottom">
+    <div class="case-bottom">
         <div class="case-bottom-content">
             <div class="case-bottom-content-col">
-                <a href="/projects/gk-sails/" class="case-bottom-content__forward case-tooltip" title="Вперёд">
+                <a href="/projects/gk-sails/" class="case-bottom-content__forward case-tooltip tooltipstered">
                     Вперед
                     <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L4 4.5L1 8" stroke="black" stroke-opacity="0.75"></path>
@@ -106,7 +98,7 @@ $APPLICATION->SetTitle("blog");
                 </a>
             </div>
             <div class="case-bottom-content__time">Время чтения: 7 минут</div>
-			<div class="case-bottom-content-col">
+            <div class="case-bottom-content-col">
                 <div data-entity="like" data-id="18" class="case-bottom-content__like ">
                     <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.07186 5.73684C1.8604 10.4737 8.96659 16 8.96659 16C8.96659 16 16.0719 10.4737 16.8613 5.73684C17.1209 4.17938 16.8613 1 12.914 1C10.506 1 8.96659 4.15789 8.96659 4.15789C8.96659 4.15789 7.38765 1 5.01923 1C1.07186 1 0.812577 4.17933 1.07186 5.73684Z" stroke="black" stroke-opacity="0.75"></path>
@@ -115,15 +107,15 @@ $APPLICATION->SetTitle("blog");
                 </div>
                 <div class="case-bottom-content__looks">
                     <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M9 1C3.14883 1 1 7 1 7C1 7 3.14883 13 9 13C14.8512 13 17 7 17 7C17 7 14.8512 1 9 1Z" stroke="black" stroke-opacity="0.75" stroke-linejoin="round"/>
-						<path d="M11.5 7C11.5 8.38071 10.3807 9.5 9 9.5C7.61929 9.5 6.5 8.38071 6.5 7C6.5 5.61929 7.61929 4.5 9 4.5C10.3807 4.5 11.5 5.61929 11.5 7Z" stroke="black" stroke-opacity="0.75"/>
-					</svg>
+                        <path d="M9 1C3.14883 1 1 7 1 7C1 7 3.14883 13 9 13C14.8512 13 17 7 17 7C17 7 14.8512 1 9 1Z" stroke="black" stroke-opacity="0.75" stroke-linejoin="round"></path>
+                        <path d="M11.5 7C11.5 8.38071 10.3807 9.5 9 9.5C7.61929 9.5 6.5 8.38071 6.5 7C6.5 5.61929 7.61929 4.5 9 4.5C10.3807 4.5 11.5 5.61929 11.5 7Z" stroke="black" stroke-opacity="0.75"></path>
+                    </svg>
                     112
                 </div>
             </div>
         </div>
         <div class="case-bottom-progress">
-            <span class="case-bottom-progress-bar"></span>
+            <span class="case-bottom-progress-bar" style="width: 75.3998%;"></span>
         </div>
     </div>
 </div>

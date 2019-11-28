@@ -16,7 +16,7 @@ use Bitrix\Main\Loader;
 use Bitrix\Main\ModuleManager;
 
 $this->setFrameMode(true);
-$this->addExternalCss('/bitrix/css/main/bootstrap.css');
+
 
 if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y')
 {
@@ -29,8 +29,7 @@ else
 
 $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEBAR_PATH']));
 ?>
-<div class='row'>
-	<div class='<?=($isSidebar ? 'col-md-9 col-sm-8' : 'col-xs-12')?>'>
+<div class="blogpage">
 		<?
 		if ($arParams["USE_COMPARE"] === "Y")
 		{
@@ -68,7 +67,7 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 			'CHECK_SECTION_ID_VARIABLE' => (isset($arParams['DETAIL_CHECK_SECTION_ID_VARIABLE']) ? $arParams['DETAIL_CHECK_SECTION_ID_VARIABLE'] : ''),
 			'PRODUCT_QUANTITY_VARIABLE' => $arParams['PRODUCT_QUANTITY_VARIABLE'],
 			'PRODUCT_PROPS_VARIABLE' => $arParams['PRODUCT_PROPS_VARIABLE'],
-			'CACHE_TYPE' => $arParams['CACHE_TYPE'],
+			'CACHE_TYPE' => "N",//$arParams['CACHE_TYPE'],
 			'CACHE_TIME' => $arParams['CACHE_TIME'],
 			'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
 			'SET_TITLE' => $arParams['SET_TITLE'],
@@ -222,11 +221,12 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 
 		$elementId = $APPLICATION->IncludeComponent(
 			'bitrix:catalog.element',
-			'',
+			'blog',
 			$componentElementParams,
 			$component
 		);
 		$GLOBALS['CATALOG_CURRENT_ELEMENT_ID'] = $elementId;
+
 
 		if ($elementId > 0)
 		{
@@ -676,23 +676,4 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 			}
 		}
 		?>
-	</div>
-	<? if ($isSidebar): ?>
-		<div class='col-md-3 col-sm-4'>
-			<?
-			$APPLICATION->IncludeComponent(
-				'bitrix:main.include',
-				'',
-				array(
-					'AREA_FILE_SHOW' => 'file',
-					'PATH' => $arParams['SIDEBAR_PATH'],
-					'AREA_FILE_RECURSIVE' => 'N',
-					'EDIT_MODE' => 'html',
-				),
-				false,
-				array('HIDE_ICONS' => 'Y')
-			);
-			?>
-		</div>
-	<? endif ?>
 </div>

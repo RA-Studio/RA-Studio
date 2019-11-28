@@ -60,7 +60,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                             <div class="main-about-items-item__text">Средняя оценка нас клиентами по данным Рейтинга Рунета</div>
                         </div>
                         <div class="main-about-items-item">
-                            <div class="main-about-items-item__title">30</div>
+                            <div class="main-about-items-item__title">15</div>
                             <div class="main-about-items-item__text">Топ разработчиков<br> интернет-магазинов по версии CMS Magazine</div>
                         </div>
                         <div class="main-about-items-item">

@@ -58,3 +58,18 @@ body.bx-theme-blue .catalog-block-header{border-color:#006cc0;}
 body.bx-theme-green .catalog-block-header{border-color:#63aa28;}
 body.bx-theme-red .catalog-block-header{border-color:#da3737;}
 body.bx-theme-yellow .catalog-block-header{border-color:#f4b236;}
+
+
+.popup-form .main-project-content-left {
+	margin-left: 50px;
+}
+.popup-form.fancybox-content.fancybox-content-popup-form{
+	padding: 20px;
+	max-width: 1400px !important;
+}
+
+@media screen and (max-width: 767px){
+	.main-project-content-left{
+		display: none;
+	}
+}
