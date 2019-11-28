@@ -175,8 +175,8 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
     </div>
     <div class="case-bottom">
         <div class="case-bottom-content">
-            <div class="case-bottom-content-col">
-                <?$prevFilter = Array(
+            <div class="case-bottom-content-col"><?
+                $prevFilter = Array(
                     "IBLOCK_ID"=>$arResult['IBLOCK_ID'],
                     "ACTIVE"=>"Y",
                     "<ID"=>$arResult['ID'],
@@ -185,14 +185,13 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 $res->SetUrlTemplates($arParams['DETAIL_URL']);
                 if ($ar_fields = $res->GetNextElement()){
                     $item=$ar_fields->GetFields();
-                    ?>
-                    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__back case-tooltip" title="<?=$item['NAME']?>">
+                    ?><a href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__back case-tooltip" title="<?=$item['NAME']?>">
                         <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 1L1 4.5L4 8" stroke="black" stroke-opacity="0.75"/>
                         </svg>
                         Назад
-                    </a>
-                <?}
+                    </a><?
+                }
                 $nextFilter = Array(
                     "IBLOCK_ID"=>$arResult['IBLOCK_ID'],
                     "ACTIVE"=>"Y",
@@ -202,16 +201,15 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                 $res->SetUrlTemplates($arParams['DETAIL_URL']);
                 if ($ar_fields = $res->GetNextElement()){
                     $item=$ar_fields->GetFields();
-                    ?>
-                    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__forward case-tooltip" title="<?=$item['NAME']?>">
+                    ?><a href="<?=$item['DETAIL_PAGE_URL']?>" class="case-bottom-content__forward case-tooltip" title="<?=$item['NAME']?>">
                         Вперед
                         <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L4 4.5L1 8" stroke="black" stroke-opacity="0.75"/>
                         </svg>
-                    </a>
-                <?}?>
-            </div>
-
+                    </a><?
+                }
+            ?></div>
+            <div class="case-bottom-content-col">
             <?if($_POST['LIKE']=='Y'){
                 $GLOBALS['APPLICATION']->RestartBuffer();}
             $likes =!empty($arResult['PROPERTIES']['UF_LIKES']['VALUE'])?$arResult['PROPERTIES']['UF_LIKES']['VALUE']:0;
@@ -238,20 +236,18 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 
                 }
             }
-            ?>
-            <div class="case-bottom-content-col">
-                <div data-nolink data-entity="like" data-id="<?=$arResult['ID']?>" class="case-bottom-content__like <?=array_key_exists($arResult['ID'],$_SESSION['LIKES'][$arResult['IBLOCK_ID']])?'active':''?>">
+            ?><div data-nolink data-entity="like" data-id="<?=$arResult['ID']?>" class="case-bottom-content__like <?=array_key_exists($arResult['ID'],$_SESSION['LIKES'][$arResult['IBLOCK_ID']])?'active':''?>">
                     <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.07186 5.73684C1.8604 10.4737 8.96659 16 8.96659 16C8.96659 16 16.0719 10.4737 16.8613 5.73684C17.1209 4.17938 16.8613 1 12.914 1C10.506 1 8.96659 4.15789 8.96659 4.15789C8.96659 4.15789 7.38765 1 5.01923 1C1.07186 1 0.812577 4.17933 1.07186 5.73684Z" stroke="black" stroke-opacity="0.75"/>
                     </svg>
-                    <?=$likes?>
-                </div>
+                    <?=$likes
+            ?></div><?
+            if($_POST['LIKE']=='Y'){
+                die() ;
+            }?>
 
                 <a data-nolink class="case-bottom-content__btn fancybox-btn-init" data-fancybox="" data-options="{&quot;src&quot;: &quot;#ProjectForm&quot;, &quot;touch&quot;: false}" title="Обсудить проект" href="javascript:;">Сделать заказ</a>
             </div>
-            <?if($_POST['LIKE']=='Y'){
-                die() ;
-            }?>
         </div>
         <div class="case-bottom-progress">
             <span class="case-bottom-progress-bar"></span>

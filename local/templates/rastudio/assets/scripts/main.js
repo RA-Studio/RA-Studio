@@ -187,7 +187,7 @@ $(document).ready(function () {
 			type:'POST',
 			data :{'AJAX':'Y',"LIKE":'Y',"ID":id},
 			success:function (result) {
-				$this.html($(result).find('[data-entity="like"]').html());
+				$this.html($(result).html());
 				$this.toggleClass('active');
 			}
 		});

@@ -210,7 +210,10 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache)
 			}
 			else
 			{
-				if (modef.style.display === 'none')
+				$.get(BX.util.htmlspecialcharsback(result.FILTER_AJAX_URL), { "AJAX_MODE" : "Y"}).done((data) => {
+					$('.blog-content').html($(data).find('.blog-content').html());
+				});
+				/*if (modef.style.display === 'none')
 				{
 					modef.style.display = 'inline-block';
 				}
@@ -220,7 +223,7 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache)
 					curProp = BX.findChild(BX.findParent(this.curFilterinput, {'class':'bx-filter-parameters-box'}), {'class':'bx-filter-container-modef'}, true, false);
 					curProp.appendChild(modef);
 				}
-
+			*/
 				if (result.SEF_SET_FILTER_URL)
 				{
 					this.bindUrlToButton('set_filter', result.SEF_SET_FILTER_URL);
