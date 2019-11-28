@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Блог");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"blog",
+	"blog", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -19,7 +19,7 @@ $APPLICATION->SetTitle("Блог");
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"BASKET_URL" => "/personal/basket.php",
+		"BASKET_URL" => "/personal/basket/",
 		"BIG_DATA_RCM_TYPE" => "personal",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
@@ -28,7 +28,7 @@ $APPLICATION->SetTitle("Блог");
 		"COMMON_ADD_TO_BASKET_ACTION" => "ADD",
 		"COMMON_SHOW_CLOSE_POPUP" => "N",
 		"COMPATIBLE_MODE" => "Y",
-		"COMPONENT_TEMPLATE" => "cases",
+		"COMPONENT_TEMPLATE" => "blog",
 		"CONVERT_CURRENCY" => "N",
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
 		"DETAIL_ADD_TO_BASKET_ACTION" => array(
@@ -56,9 +56,9 @@ $APPLICATION->SetTitle("Блог");
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
-		"DETAIL_SHOW_POPULAR" => "Y",
+		"DETAIL_SHOW_POPULAR" => "N",
 		"DETAIL_SHOW_SLIDER" => "N",
-		"DETAIL_SHOW_VIEWED" => "Y",
+		"DETAIL_SHOW_VIEWED" => "N",
 		"DETAIL_STRICT_SECTION_CHECK" => "N",
 		"DETAIL_USE_COMMENTS" => "N",
 		"DETAIL_USE_VOTE_RATING" => "N",
@@ -107,7 +107,7 @@ $APPLICATION->SetTitle("Блог");
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'0','BIG_DATA':false}]",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false},{'VARIANT':'0','BIG_DATA':false}]",
 		"LIST_PROPERTY_CODE_MOBILE" => array(
 			0 => "UF_TAGS",
 			1 => "UF_VIEW_COUNT",
@@ -138,7 +138,7 @@ $APPLICATION->SetTitle("Блог");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "1",
+		"PAGE_ELEMENT_COUNT" => "12",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
 		),
@@ -194,7 +194,7 @@ $APPLICATION->SetTitle("Блог");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"USE_REVIEW" => "N",
-		"USE_SALE_BESTSELLERS" => "Y",
+		"USE_SALE_BESTSELLERS" => "N",
 		"USE_SEARCH" => "Y",
 		"USE_STORE" => "N",
 		"COMPOSITE_FRAME_MODE" => "A",
