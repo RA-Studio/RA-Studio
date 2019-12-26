@@ -8,12 +8,12 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <title><?$APPLICATION->ShowTitle()?></title>
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="RA-Studio">
+    <meta property="og:site_name" content="<?=SITE_NAME?>">
     <meta property="og:title" content="<?=$APPLICATION->ShowTitle()?>">
     <meta property="og:description" content="<?=$APPLICATION->ShowProperty('description')?>">
     <meta property="og:url" content="<?=SITE_LINK?>">
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:image" content="/local/templates/rastudio/assets/images/preview.png">
+    <meta property="og:image" content="<?=SITE_TEMPLATE_PATH?>/assets/images/preview.png">
     <meta property="og:image:width" content="968">
     <meta property="og:image:height" content="504">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -301,26 +301,26 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     </header><?
     global $USER; if($USER->IsAdmin()){
         $APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"horizontal_multilevel", 
-	array(
-		"ALLOW_MULTI_SELECT" => "Y",
-		"CHILD_MENU_TYPE" => "left",
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "4",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "admin",
-		"USE_EXT" => "Y",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
-	),
-	false
-);$APPLICATION->IncludeComponent(
+        	"bitrix:menu", 
+        	"horizontal_multilevel", 
+        	array(
+        		"ALLOW_MULTI_SELECT" => "Y",
+        		"CHILD_MENU_TYPE" => "left",
+        		"COMPONENT_TEMPLATE" => "horizontal_multilevel",
+        		"DELAY" => "N",
+        		"MAX_LEVEL" => "3",
+        		"MENU_CACHE_GET_VARS" => array(
+        		),
+        		"MENU_CACHE_TIME" => "3600",
+        		"MENU_CACHE_TYPE" => "N",
+        		"MENU_CACHE_USE_GROUPS" => "Y",
+        		"ROOT_MENU_TYPE" => "admin",
+        		"USE_EXT" => "Y",
+        		"COMPOSITE_FRAME_MODE" => "A",
+        		"COMPOSITE_FRAME_TYPE" => "AUTO"
+        	),
+        	false
+        );$APPLICATION->IncludeComponent(
             "bitrix:breadcrumb",
             "",
             Array(

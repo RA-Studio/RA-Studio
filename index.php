@@ -12,6 +12,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                             <div class="main-banner-left__text"><?$APPLICATION->ShowProperty('subtitle')?></div>
                             <h1 class="main-banner-left__title"><?$APPLICATION->ShowTitle(false)?></h1>
                             <div class="main-banner-left-items">
+                                13
                                 <div class="main-banner-left-items__item">Соблюдение сроков</div>
                                 <div class="main-banner-left-items__item">Системный подход</div>
                                 <div class="main-banner-left-items__item">Уникальные решения</div>
@@ -29,10 +30,10 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                             </svg>
                         </div>*/?>
                         <div class="main-banner-bot-item">
-                        	<img src="/local/templates/rastudio/assets/images/prize1.png" alt=""><span>29 место разработчик интернет-магазинов</span>
+                        	<img src="/local/templates/rastudio/assets/images/prize1.png" alt=""><span>11 место разработчик интернет-магазинов 2019</span>
                         </div>
                         <div class="main-banner-bot-item">
-                        	<img src="/local/templates/rastudio/assets/images/prize2.png" alt=""><span>32 место разработчик в Санкт&nbsp;-&nbsp;Петербурге</span>
+                        	<img src="/local/templates/rastudio/assets/images/prize2.png" alt=""><span>32 место разработчик в Санкт-Петербурге 2018</span>
                         </div>
                         <div class="main-banner-bot-item">
                         	<img src="/local/templates/rastudio/assets/images/prize3.png" alt=""><span>Участник сообщества цифровых компаний Санкт-Петербурга</span>

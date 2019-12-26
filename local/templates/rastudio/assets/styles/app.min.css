@@ -1234,7 +1234,7 @@ template {
 
 .main-banner-bot-item span {
     margin-left: 15px;
-    max-width: 146px;
+    max-width: 149px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5)
 }
@@ -2127,7 +2127,7 @@ template {
         margin-right: 30px
     }
     .main-banner-bot-item span {
-        max-width: 122px;
+        max-width: 130px;
         font-size: 12px
     }
     .main-about {
