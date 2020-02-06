@@ -5202,7 +5202,6 @@ form.success textarea{
 .blog-tags-item input{
     display: none;
 }
-.blog-tags-item:first-child,
 .blog-tags-item label{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -5219,6 +5218,7 @@ form.success textarea{
     cursor: pointer;
 }
 .blog-tags-item.active,
+.clear-tags-form label.active,
 .blog-tags-item input:checked + label{
     background: #6E1866;
     border: 1px solid #6E1866;
