@@ -47,7 +47,6 @@ Disallow: /reputation-management
 Disallow: /web-design
 Disallow: /cases
 Disallow: /project-board*
-Disallow: *
 
 User-Agent: Yandex
 Disallow: */index.php

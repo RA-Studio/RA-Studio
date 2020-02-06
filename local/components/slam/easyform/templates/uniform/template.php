@@ -222,4 +222,16 @@ break;
             $('#<?=$FORM_ID?>').find('.general-itemInput__label_top').removeClass('general-itemInput__label_top');
         }, 1000);
     }
+$('.submit-btn').click(function(e){ // не забываем дописать этот блок, иначе валдиация не пашет
+        let form = $(this).closest('form');
+        //e.preventDefault();
+        if(!raValidation($(this).closest('form'))){  
+            ifError(form);           // функция ifError
+        } else {
+            $(this).closest('form').submit();
+            ifSuccess(form);
+            success_<?=$FORM_ID?>();
+        }
+        //return false;
+    })
 </script>

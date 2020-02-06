@@ -3,7 +3,7 @@ $sSectionName = "Главная";
 $arDirProperties = Array(
    "description" => "Description",
    "keywords" => "Keywords",
-   "TITLE" => "RA-Studio",
+   "TITLE" => "Digital-агентство RA-Studio - разработка, техподдержка, дизайн и продвижение сайтов.",
    "ROBOTS" => "index, follow"
 );
 ?>

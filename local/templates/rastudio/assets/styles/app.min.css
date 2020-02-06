@@ -29,7 +29,7 @@
     animation-timing-function: ease;   
 }
 .pasxalka__btn{
-	position: absolute;
+	/*position: absolute;
 	bottom: 50px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -44,7 +44,28 @@
 	background: #B9423A;
 	color: #fff;
 	width: 200px;
-	height: 40px;
+	height: 40px;*/
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    top: 310px;
+    transform: translateX(-50%);
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    border-radius: 393% 45% 487% 75%;
+    background: #ab070e;
+    color: #391818;
+    font-family: cursive;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
 }
 
 *:focus {

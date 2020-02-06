@@ -1,8 +1,8 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty("subtitle", "Делегируйте работу профессионалам");
-$APPLICATION->SetPageProperty("TITLE", "Разработка, поддержка и продвижение сайтов в СПб.");
-$APPLICATION->SetPageProperty("description", "Создание сайтов на Битрикс, Joomla, UMI от сертифицированного разработчика. Раскрутка сайта с нуля в ТОП Яндекс и Гугл. Создание лендинга. Настройка контекстной рекламы в digital-агенстве RA-STUDIO.");
+//$APPLICATION->SetPageProperty("TITLE", "Digital-агентство RA-Studio - разработка, техподдержка, дизайн и продвижение сайтов.");
+$APPLICATION->SetPageProperty("description", "Создание сайтов на 1C-Битрикс, ModX, UMI от сертифицированного разработчика. Раскрутка сайта с нуля в ТОП Яндекс и Гугл. Техническая поддержка в диджитал-агентстве RA-Studio.. Настройка контекстной рекламы и создание лендингов.");
 $APPLICATION->SetTitle("Разработка, поддержка и продвижение сайтов");
 ?>
             <div class="main">
@@ -29,7 +29,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                             </svg>
                         </div>*/?>
                         <div class="main-banner-bot-item">
-                        	<img src="/local/templates/rastudio/assets/images/prize1.png" alt=""><span>29 место разработчик интернет-магазинов</span>
+                        	<img src="/local/templates/rastudio/assets/images/prize1.png" alt=""><span>11 место разработчик интернет-магазинов</span>
                         </div>
                         <div class="main-banner-bot-item">
                         	<img src="/local/templates/rastudio/assets/images/prize2.png" alt=""><span>32 место разработчик в Санкт&nbsp;-&nbsp;Петербурге</span>
@@ -88,11 +88,12 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M3.5 28.5H2.5V29.5H3.5V28.5ZM41 28.5V29.5H42V28.5H41ZM41 1.5H42C42 0.947715 41.5523 0.5 41 0.5V1.5ZM3.5 1.5V0.5C2.94772 0.5 2.5 0.947715 2.5 1.5L3.5 1.5ZM3.5 29.5H41V27.5H3.5V29.5ZM42 28.5V1.5H40V28.5H42ZM41 0.5H3.5V2.5H41V0.5ZM2.5 1.5V28.5H4.5V1.5H2.5ZM0 35.5H44V33.5H0V35.5Z" fill="white"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <h2 class="main-ways-item-top-left-info__title">Сайты</h2>
+                                        <h2 class="main-ways-item-top-left-info__title">Разработка уникальных проектов со сложными интеграциями</h2>
                                         <div class="main-ways-item-top-left-info-items">
                                             <h3 class="main-ways-item-top-left-info-items__item">Корпоративные сайты</h3>
-                                            <h3 class="main-ways-item-top-left-info-items__item">Интернет-магазины</h3>
-                                            <h3 class="main-ways-item-top-left-info-items__item">Промо-сайты</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">E-commerce проекты</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Интернет-сервисы</h3>
+											<h3 class="main-ways-item-top-left-info-items__item">B2b и B2c личные кабинеты</h3>
                                         </div>
                                     </div>
                                 </div><svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,11 +206,13 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         <path d="M37.237 16.877C39.0798 20.0688 39.8909 23.5707 39.775 26.9998L20.0001 26.9998L20.0001 7.389C26.8335 7.11339 33.5821 10.5466 37.237 16.877Z" stroke="white" stroke-width="2"/>
                                     </svg>
                                     <div class="main-ways-item-top-left-info">
-                                        <h2 class="main-ways-item-top-left-info__title">Аналитика</h2>
+                                        <h2 class="main-ways-item-top-left-info__title">Digital-маркетинг</h2>
                                         <div class="main-ways-item-top-left-info-items">
-                                            <h3 class="main-ways-item-top-left-info-items__item">Работа с конверсией</h3>
-                                            <h3 class="main-ways-item-top-left-info-items__item">SEO-оптимизация</h3>
-                                            <h3 class="main-ways-item-top-left-info-items__item">Управление трафиком</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Поисковое продвижение (SEO) </h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Контекстная реклама</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Таргетированная реклама</h3>
+											<h3 class="main-ways-item-top-left-info-items__item">Разработка Digital-стратегии</h3>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -304,8 +307,8 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                 </div>
                 */?>
                 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"clients", 
+	"bitrix:news.list",
+	"clients",
 	array(
 		"COMPONENT_TEMPLATE" => "clients",
 		"IBLOCK_TYPE" => "content",
@@ -378,8 +381,8 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                 "ACTIVE" => array("Y", "N")
                 );?>
                 <?/*$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"vacancyMain", 
+	"bitrix:news.list",
+	"vacancyMain",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -573,8 +576,8 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         false
                                     );?></a></div>
                             <?$APPLICATION->IncludeComponent(
-	"slam:easyform", 
-	"uniform", 
+	"slam:easyform",
+	"uniform",
 	array(
 		"COMPONENT_TEMPLATE" => "uniform",
 		"FORM_ID" => "FORM10",
