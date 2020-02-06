@@ -23,8 +23,7 @@ if (isset($templateData['TEMPLATE_THEME'])) {
 $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 ?>
 <form name="<? echo $arResult["FILTER_NAME"] . "_form" ?>" action="<? echo $arResult["FORM_ACTION"] ?>" method="get" class="blog-tags">
-    <div onclick="$(this).closest('form')[0].reset();smartFilter.click(this)" class="blog-tags-item active">Все статьи</div>
-    <?/*<div class="main-filters__clear" onclick="$(this).closest('form')[0].reset();smartFilter.click(this)" ><?=GetMessage("CT_BCSF_DEL_FILTER")?></div>*/?>
+
     <? foreach ($arResult["HIDDEN"] as $arItem) { ?>
         <input type="hidden" name="<? echo $arItem["CONTROL_NAME"] ?>" id="<? echo $arItem["CONTROL_ID"] ?>"
                value="<? echo $arItem["HTML_VALUE"] ?>"/>
@@ -629,21 +628,33 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
         break;
         default://CHECKBOXES
         ?>
-        <?
-        foreach ($arItem["VALUES"] as $val => $ar): ?>
+
+        <?$checked = true;
+        foreach ($arItem["VALUES"] as $val => $ar):
+        if ($ar["CHECKED"]){
+            $checked = false;
+        }
+        ?>
             <div class="blog-tags-item">
                 <input type="checkbox"
                        value="<? echo $ar["HTML_VALUE"] ?>"
                        name="<? echo $ar["CONTROL_NAME"] ?>"
                        id="<? echo $ar["CONTROL_ID"] ?>"
                     <?=$ar["CHECKED"] ? 'checked="checked"' : '' ?>
-                       onclick="smartFilter.click(this)"
+                       onclick="$('.clear-tags-form label').removeClass('active');smartFilter.click(this)"
                 >
                 <label class="<?=$ar["CHECKED"] ? 'active' : '' ?>" for="<?=$ar["CONTROL_ID"] ?>"><?= $ar["VALUE"]; ?></label>
             </div>
         <?
         endforeach;
             ?>
+            <div onclick="$(this).closest('form').find('input').val('');$(this).find('label').addClass('active');smartFilter.click(this)" class="clear-tags-form blog-tags-item">
+                <input type="checkbox"
+                       name="del"
+                       id="del"
+                >
+                <label class="<?=$checked?'active':''?>">Все статьи</label>
+            </div>
         <?
         }
         ?>
@@ -663,7 +674,4 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 
 <script type="text/javascript">
     var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
-    $('.main-filters__clear').on('click',function () {
-        $(this).closest('form')[0].reset();
-    })
 </script>

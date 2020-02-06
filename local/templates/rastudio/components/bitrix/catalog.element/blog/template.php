@@ -307,12 +307,11 @@ if(!in_array($arResult['ID'],$_SESSION['VIEW'][$arResult['IBLOCK_ID']])) {
             $time = "{$minutes} {$str_minutes}";?>
             <div class="case-bottom-content__time">Время чтения: <?=$time?></div>
             <div class="case-bottom-content-col"><?
-                if($_POST['LIKE']=='Y'){$GLOBALS['APPLICATION']->RestartBuffer();}
+                if($_POST['LIKE']=='Y'){
+                    $GLOBALS['APPLICATION']->RestartBuffer();}
                 $likes =!empty($arResult['PROPERTIES']['UF_LIKES']['VALUE'])?$arResult['PROPERTIES']['UF_LIKES']['VALUE']:0;
                 if($_POST['LIKE']=='Y'){
                     $likes = !in_array($_POST['ID'],$_SESSION['LIKES'][$arResult['IBLOCK_ID']])?$likes+1:$likes-1;
-
-
                     if (!in_array($_POST['ID'],$_SESSION['LIKES'][$arResult['IBLOCK_ID']]) || empty($_SESSION['LIKES'][$arResult['IBLOCK_ID']])){//проверка лайкано ли
                         if(empty($_SESSION['LIKES'][$arResult['IBLOCK_ID']])){ //если не просматривалась и просмотренных нет
                             $_SESSION['LIKES'][$arResult['IBLOCK_ID']][$_POST['ID']] = $_POST['ID'];

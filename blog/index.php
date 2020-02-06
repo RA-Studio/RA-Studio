@@ -111,10 +111,9 @@ $APPLICATION->SetTitle("Блог");
 		"LIST_PROPERTY_CODE_MOBILE" => array(
 			0 => "UF_TAGS",
 			1 => "UF_VIEW_COUNT",
-			2 => "UF_LIKE",
-			3 => "UF_AUTHOR_PHOTO",
-			4 => "UF_AUTHOR_NAME",
-			5 => "UF_AUTHOR_DESCRIPTION",
+			2 => "UF_AUTHOR_PHOTO",
+			3 => "UF_AUTHOR_NAME",
+			4 => "UF_AUTHOR_DESCRIPTION",
 		),
 		"LIST_SHOW_SLIDER" => "Y",
 		"LIST_SLIDER_INTERVAL" => "3000",

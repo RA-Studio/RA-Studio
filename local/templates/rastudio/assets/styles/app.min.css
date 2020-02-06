@@ -1255,7 +1255,7 @@ template {
 
 .main-banner-bot-item span {
     margin-left: 15px;
-    max-width: 146px;
+    max-width: 149px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5)
 }
@@ -2148,7 +2148,7 @@ template {
         margin-right: 30px
     }
     .main-banner-bot-item span {
-        max-width: 122px;
+        max-width: 130px;
         font-size: 12px
     }
     .main-about {
@@ -5223,7 +5223,6 @@ form.success textarea{
 .blog-tags-item input{
     display: none;
 }
-.blog-tags-item:first-child,
 .blog-tags-item label{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -5240,6 +5239,7 @@ form.success textarea{
     cursor: pointer;
 }
 .blog-tags-item.active,
+.clear-tags-form label.active,
 .blog-tags-item input:checked + label{
     background: #6E1866;
     border: 1px solid #6E1866;
