@@ -68,7 +68,12 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
             <div class="services-items-item-col">
                 <div class="services-items-item__title"><?=$arSection['NAME']?></div>
                 <div class="services-items-item__text"><?=$arSection['DESCRIPTION']?></div>
-                <a href="#" class="services-items-item__btn">Узнать подробнее</a>
+                <?global $USER;
+                if($USER->IsAdmin()){?>
+                    <a href="<?=$arSection['SECTION_PAGE_URL']?>" class="services-items-item__btn" style="display: flex">Узнать подробнее</a>
+                <?}else{?>
+
+                <?}?>
             </div>
             <div class="services-items-item-col">
                 <img src="<?=Cfile::GetPath($arSection['PROPERTIES']['UF_PREVIEW_PICTURE'])?>" alt="<?=$arSection['PREVIEW_PICTURE']['ALT']?>">

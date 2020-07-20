@@ -189,6 +189,9 @@ if(!in_array($arResult['ID'],$_SESSION['VIEW'][$arResult['IBLOCK_ID']])) {
                         <?}?>
                     </div>
                 <?}?>
+                <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-services="vkontakte,facebook,telegram"></div>
             </div>
         </div>
         <div class="blogpage-content-main">
@@ -260,7 +263,12 @@ if(!in_array($arResult['ID'],$_SESSION['VIEW'][$arResult['IBLOCK_ID']])) {
                 </div>
             <?}?>
         </div>
-        <div class="blogpage-content-side"></div>
+        <div class="blogpage-content-side">
+            <div class="blogpage-content-side-descr">
+            	<span></span>
+                <div class="blogpage-content-side-descr__title"></div>
+                <div class="blogpage-content-side-descr__content"></div>
+            </div></div>
     </div>
     <div class="case-bottom">
         <div class="case-bottom-content">

@@ -1,0 +1,3 @@
+User-Agent: *
+Sitemap: https://msk.ra-studio.ru/sitemap.xml
+Disallow: /*

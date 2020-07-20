@@ -2,12 +2,12 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
 
-?><pre></pre> <?$APPLICATION->IncludeComponent(
+?><pre></pre> <?/*$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket",
 	"",
 Array()
-);?><br>
-<?$APPLICATION->IncludeComponent(
+);*/?><br>
+<?/*$APPLICATION->IncludeComponent(
 	"bitrix:catalog",
 	"test",
 	Array(
@@ -188,6 +188,127 @@ Array()
 		"USE_STORE" => "N",
 		"VARIABLE_ALIASES" => array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID",)
 	)
+);*/?>
+<?$APPLICATION->IncludeComponent(
+	"slam:easyform",
+	".default",
+	Array(
+		"CAPTCHA_TITLE" => "",
+		"CATEGORY_ADUCATION_PLACEHOLDER" => "Образование",
+		"CATEGORY_ADUCATION_TITLE" => "Образование",
+		"CATEGORY_ADUCATION_TYPE" => "text",
+		"CATEGORY_ADUCATION_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_ADUCATION_VALUE" => "",
+		"CATEGORY_EMAIL_PLACEHOLDER" => "E-mail",
+		"CATEGORY_EMAIL_TITLE" => "E-mail",
+		"CATEGORY_EMAIL_TYPE" => "text",
+		"CATEGORY_EMAIL_VALIDATION_ADDITIONALLY_MESSAGE" => "data-bv-emailaddress-message=\"E-mail введен некорректно\"",
+		"CATEGORY_EMAIL_VALIDATION_MESSAGE" => "Обязательное поле",
+		"CATEGORY_EMAIL_VALUE" => "",
+		"CATEGORY_EXPERIENCE_PLACEHOLDER" => "Опыт работы",
+		"CATEGORY_EXPERIENCE_TITLE" => "Опыт работы",
+		"CATEGORY_EXPERIENCE_TYPE" => "text",
+		"CATEGORY_EXPERIENCE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_EXPERIENCE_VALUE" => "",
+		"CATEGORY_FILE_DROPZONE_INCLUDE" => "Y",
+		"CATEGORY_FILE_FILE_EXTENSION" => "doc, docx, xls, xlsx, txt, rtf, pdf, png, jpeg, jpg, gif",
+		"CATEGORY_FILE_FILE_MAX_SIZE" => "20971520",
+		"CATEGORY_FILE_PLACEHOLDER" => "",
+		"CATEGORY_FILE_TITLE" => "Прикрепить файл",
+		"CATEGORY_FILE_TYPE" => "file",
+		"CATEGORY_FILE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_FILE_VALUE" => "",
+		"CATEGORY_MESSAGE_CLASS" => "",
+		"CATEGORY_MESSAGE_PLACEHOLDER" => "",
+		"CATEGORY_MESSAGE_TITLE" => "Сообщение",
+		"CATEGORY_MESSAGE_TYPE" => "textarea",
+		"CATEGORY_MESSAGE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_MESSAGE_VALUE" => "",
+		"CATEGORY_PHONE_CLASS" => "general-itemInput_half",
+		"CATEGORY_PHONE_INPUTMASK" => "N",
+		"CATEGORY_PHONE_INPUTMASK_TEMP" => "+7 (999) 999-9999",
+		"CATEGORY_PHONE_PLACEHOLDER" => "",
+		"CATEGORY_PHONE_TITLE" => "Телефон",
+		"CATEGORY_PHONE_TYPE" => "tel",
+		"CATEGORY_PHONE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_PHONE_VALIDATION_MESSAGE" => "Обязательное поле",
+		"CATEGORY_PHONE_VALUE" => "",
+		"CATEGORY_PORTPHOLIO_PLACEHOLDER" => "Ссылка на портфолио",
+		"CATEGORY_PORTPHOLIO_TITLE" => "Ссылка на портфолио",
+		"CATEGORY_PORTPHOLIO_TYPE" => "url",
+		"CATEGORY_PORTPHOLIO_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_PORTPHOLIO_VALUE" => "",
+		"CATEGORY_TITLE_CLASS" => "general-itemInput_half",
+		"CATEGORY_TITLE_PLACEHOLDER" => "",
+		"CATEGORY_TITLE_TITLE" => "ФИО",
+		"CATEGORY_TITLE_TYPE" => "text",
+		"CATEGORY_TITLE_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_TITLE_VALIDATION_MESSAGE" => "Обязательное поле",
+		"CATEGORY_TITLE_VALUE" => "",
+		"CATEGORY_VACANCY_PLACEHOLDER" => "",
+		"CATEGORY_VACANCY_TITLE" => "VACANCY",
+		"CATEGORY_VACANCY_TYPE" => "hidden",
+		"CATEGORY_VACANCY_VALIDATION_ADDITIONALLY_MESSAGE" => "",
+		"CATEGORY_VACANCY_VALUE" => "",
+		"CLEAR_FORM" => "N",
+		"COMPONENT_TEMPLATE" => ".default",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"CREATE_SEND_MAIL" => "",
+		"CUSTOM_FORM" => "",
+		"DISPLAY_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"MESSAGE",3=>"",),
+		"EMAIL_BCC" => "",
+		"EMAIL_FILE" => "Y",
+		"EMAIL_SEND_FROM" => "N",
+		"EMAIL_TO" => "",
+		"ENABLE_SEND_MAIL" => "Y",
+		"ERROR_TEXT" => "Произошла ошибка. Сообщение не отправлено.",
+		"EVENT_MESSAGE_ID" => array(0=>"48",),
+		"FIELDS_ORDER" => "TITLE,PHONE,MESSAGE",
+		"FORM_AUTOCOMPLETE" => "Y",
+		"FORM_ID" => "FORM9",
+		"FORM_NAME" => "Свяжитесь с нами",
+		"FORM_SUBMIT_VALUE" => "Отправить",
+		"FORM_SUBMIT_VARNING" => "Нажимая на кнопку \"#BUTTON#\", вы даете согласие на обработку <a target=\"_blank\" href=\"/privacy-policy/\">персональных данных</a>",
+		"HIDE_ASTERISK" => "Y",
+		"HIDE_FIELD_NAME" => "N",
+		"HIDE_FORMVALIDATION_TEXT" => "N",
+		"INCLUDE_BOOTSRAP_JS" => "Y",
+		"MAIL_SUBJECT_ADMIN" => "#SITE_NAME#: Сообщение из формы обратной связи",
+		"OK_TEXT" => "Ваше сообщение отправлено. Мы свяжемся с вами в течение 2х часов",
+		"REQUIRED_FIELDS" => array(0=>"TITLE",1=>"PHONE",2=>"MESSAGE",),
+		"SEND_AJAX" => "Y",
+		"SHOW_MODAL" => "N",
+		"USE_BOOTSRAP_CSS" => "N",
+		"USE_BOOTSRAP_JS" => "N",
+		"USE_CAPTCHA" => "Y",
+		"USE_FORMVALIDATION_JS" => "N",
+		"USE_IBLOCK_WRITE" => "N",
+		"USE_JQUERY" => "N",
+		"USE_MODULE_VARNING" => "N",
+		"WIDTH_FORM" => "main-project-content-form",
+		"_CALLBACKS" => "success_FORM9"
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"vertical_multilevel", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "service",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "4",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "service",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "vertical_multilevel"
+	),
+	false
 );?><?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

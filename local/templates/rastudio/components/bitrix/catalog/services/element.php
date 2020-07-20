@@ -16,7 +16,7 @@ use Bitrix\Main\Loader;
 use Bitrix\Main\ModuleManager;
 
 $this->setFrameMode(true);
-$this->addExternalCss('/bitrix/css/main/bootstrap.css');
+
 
 if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y')
 {
@@ -29,8 +29,6 @@ else
 
 $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEBAR_PATH']));
 ?>
-<div class='row'>
-	<div class='<?=($isSidebar ? 'col-md-9 col-sm-8' : 'col-xs-12')?>'>
 		<?
 		if ($arParams["USE_COMPARE"] === "Y")
 		{
@@ -222,11 +220,12 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 
 		$elementId = $APPLICATION->IncludeComponent(
 			'bitrix:catalog.element',
-			'',
+			'service',
 			$componentElementParams,
 			$component
 		);
 		$GLOBALS['CATALOG_CURRENT_ELEMENT_ID'] = $elementId;
+
 
 		if ($elementId > 0)
 		{
@@ -676,7 +675,8 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 			}
 		}
 		?>
-	</div>
+
+    <?/*
 	<? if ($isSidebar): ?>
 		<div class='col-md-3 col-sm-4'>
 			<?
@@ -695,4 +695,4 @@ $isSidebar = ($arParams['SIDEBAR_DETAIL_SHOW'] == 'Y' && !empty($arParams['SIDEB
 			?>
 		</div>
 	<? endif ?>
-</div>
+    */?>

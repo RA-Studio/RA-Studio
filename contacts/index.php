@@ -11,7 +11,7 @@ $APPLICATION->SetTitle("Контакты");
             <div class="contacts-left__subtitle">Телефон и почта</div>
             <div class="contacts-left__text">
                 <a data-nolink href="mailto:info@ra-studio.ru">info@ra-studio.ru</a>
-                <a data-nolink href="tel:+78126112333">+7 (812) 611-2-333</a>
+                <a data-nolink href="tel:8 (911) 209-65-72">8 (911) 209-65-72</a>
             </div>
             <?$APPLICATION->IncludeComponent(
 	"slam:easyform", 
@@ -120,7 +120,9 @@ $APPLICATION->SetTitle("Контакты");
 		"CATEGORY_PHONE_CLASS" => "general-itemInput_half",
 		"CATEGORY_MESSAGE_CLASS" => "",
 		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"CUSTOM_FORM" => "",
+		"CAPTCHA_TITLE" => ""
 	),
 	false
 );?>

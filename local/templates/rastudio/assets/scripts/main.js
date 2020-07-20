@@ -212,6 +212,52 @@ $(document).on('click','.blogpage-bescription',function (e) {
 		position = $(this).offset().top - $('.blogpage-content-main').offset().top;
 	container.find('.blogpage-content-side-descr__title').text(title);
 	container.find('.blogpage-content-side-descr__content').text(content);
-	container.css('top', position).fadeIn('fast');
+
+	if(document.documentElement.clientWidth > 1200){
+		container.css('top', position).fadeIn('fast');
+	} else {
+		$('.blogpage-content-side:last-child').addClass('active');
+		$('.blogpage-content-side-descr').addClass('active');
+	}
+});
+$(document).on('click','.blogpage-content-side.active',function (e) {
+	let div = $('.blogpage-content-side-descr');
+	if(!div.is(e.target) && div.has(e.target).length === 0 ){
+		$('.blogpage-content-side-descr.active').removeClass('active');
+		setTimeout(() => {
+			$('.blogpage-content-side.active').removeClass('active');
+		}, 300)
+	}
+});
+$(document).on('click','.blogpage-content-side-descr span',function (e) {
+	$('.blogpage-content-side-descr.active').removeClass('active');
+	setTimeout(() => {
+		$('.blogpage-content-side.active').removeClass('active');
+	}, 300)
+});
+$(document).on('scroll', function (e) {
+	$('.blogpage-content-side').removeClass('active');
+});
+$(window).resize(function(e){
+	$('.blogpage-content-side').removeClass('active');
 });
 /*Появление определения в блоге Конец*/
+
+
+/*Меню на Услугах*/
+$(document).on('click','.services-menu-col__title',function (e) {
+	if($(this).hasClass('active')){
+		$(this).removeClass('active');
+		$(this).next().slideUp();
+	} else {
+		$('.services-menu-col-items').slideUp();
+		$('.services-menu-col__title').removeClass('active');
+		$(this).next().slideDown();
+		$(this).addClass('active');
+	}
+});
+$(document).on('click','.services-menu__title',function (e) {
+	$(this).next().slideToggle();
+	$(this).toggleClass('active');
+});
+/*Меню на Услугах Конец*/

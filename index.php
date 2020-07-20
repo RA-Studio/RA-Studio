@@ -2,7 +2,7 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty("subtitle", "Делегируйте работу профессионалам");
 //$APPLICATION->SetPageProperty("TITLE", "Digital-агентство RA-Studio - разработка, техподдержка, дизайн и продвижение сайтов.");
-$APPLICATION->SetPageProperty("description", "Создание сайтов на 1C-Битрикс, ModX, UMI от сертифицированного разработчика. Раскрутка сайта с нуля в ТОП Яндекс и Гугл. Техническая поддержка в диджитал-агентстве RA-Studio.. Настройка контекстной рекламы и создание лендингов.");
+$APPLICATION->SetPageProperty("description", "✅Создание сайтов на 1C-Битрикс, ModX, UMI от сертифицированного разработчика. Раскрутка сайта с нуля в ТОП Яндекс и Гугл. Техническая поддержка в диджитал-агентстве RA-Studio.. Настройка контекстной рекламы и создание лендингов. ✆8 (812) 611-2-333");
 $APPLICATION->SetTitle("Разработка, поддержка и продвижение сайтов");
 ?>
             <div class="main">
@@ -52,7 +52,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                             <div class="main-about-items-item__text">Довольных клиентов, работающих с нами</div>
                         </div>
                         <div class="main-about-items-item">
-                            <div class="main-about-items-item__title">28</div>
+                            <div class="main-about-items-item__title">32</div>
                             <div class="main-about-items-item__text">Топ разработчиков 1С-Битрикс в Санкт-Петербурге</div>
                         </div>
                         <div class="main-about-items-item">
@@ -158,7 +158,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                             </div>
                         </div>
                     </div>
-                    <div class="main-ways-item" data-aos="fade-up">
+                    <!--<div class="main-ways-item" data-aos="fade-up">
                         <div class="main-ways-item-top">
                             <div class="main-ways-item-top-wrap">
                                 <div class="main-ways-item-top-left"><svg width="41" height="27" viewBox="0 0 41 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="main-ways-item" data-aos="fade-up">
                         <div class="main-ways-item-top">
                             <div class="main-ways-item-top-wrap">
@@ -212,7 +212,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                             <h3 class="main-ways-item-top-left-info-items__item">Контекстная реклама</h3>
                                             <h3 class="main-ways-item-top-left-info-items__item">Таргетированная реклама</h3>
 											<h3 class="main-ways-item-top-left-info-items__item">Разработка Digital-стратегии</h3>
-                                            
+                                            <h3 class="main-ways-item-top-left-info-items__item">Омниканальный маркетинг</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -254,6 +254,7 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                             <h3 class="main-ways-item-top-left-info-items__item">Устранение негатива</h3>
                                             <h3 class="main-ways-item-top-left-info-items__item">Формирование поисковой брендовой выдачи</h3>
                                             <h3 class="main-ways-item-top-left-info-items__item">Формирование спроса</h3>
+                                            <h3 class="main-ways-item-top-left-info-items__item">Крауд-маркетинг</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -576,12 +577,12 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
                                         false
                                     );?></a></div>
                             <?$APPLICATION->IncludeComponent(
-	"slam:easyform",
-	"uniform",
+	"slam:easyform", 
+	"uniform", 
 	array(
 		"COMPONENT_TEMPLATE" => "uniform",
 		"FORM_ID" => "FORM10",
-		"FORM_NAME" => "",
+		"FORM_NAME" => "Заявка на разработку сайта",
 		"WIDTH_FORM" => "main-project-content-form",
 		"DISPLAY_FIELDS" => array(
 			0 => "TITLE",
@@ -598,7 +599,6 @@ $APPLICATION->SetTitle("Разработка, поддержка и продви
 			2 => "PHONE",
 			3 => "MESSAGE",
 			4 => "COMPANY",
-			5 => "DIRECTION",
 		),
 		"FIELDS_ORDER" => "DIRECTION,TITLE,EMAIL,PHONE,COMPANY,MESSAGE",
 		"FORM_AUTOCOMPLETE" => "Y",

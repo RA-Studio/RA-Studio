@@ -198,8 +198,8 @@ break;
                 <button data-type="cleanForm" class="general__btn">Очистить форму</button>
             </div>
             <?}?>
-            <div class="general-bottomBlock">
-                <button type="submit" class="general__btn" data-default="<?=$arParams['FORM_SUBMIT_VALUE']?>"><?=$arParams['FORM_SUBMIT_VALUE']?></button>
+            <div>
+                <button type="submit" data-default="<?=$arParams['FORM_SUBMIT_VALUE']?>"><?=$arParams['FORM_SUBMIT_VALUE']?></button>
                 <?if($arResult['WARNING_MSG']){?>
                     <p class="general-bottomBlock__text"><?=$arResult['WARNING_MSG'];?></p>
                 <?}?>

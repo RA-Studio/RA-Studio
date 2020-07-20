@@ -21,9 +21,7 @@ else
 }
 
 if ($isFilter || $isSidebar): ?>
-	<div class="col-md-3 col-sm-4 col-sm-push-8 col-md-push-9<?=(isset($arParams['FILTER_HIDE_ON_MOBILE']) && $arParams['FILTER_HIDE_ON_MOBILE'] === 'Y' ? ' hidden-xs' : '')?>">
 		<? if ($isFilter): ?>
-			<div class="bx-sidebar-block">
 				<?
 				$APPLICATION->IncludeComponent(
 					"bitrix:catalog.smart.filter",
@@ -56,10 +54,9 @@ if ($isFilter || $isSidebar): ?>
 					array('HIDE_ICONS' => 'Y')
 				);
 				?>
-			</div>
+
 		<? endif ?>
 		<? if ($isSidebar): ?>
-			<div class="hidden-xs">
 				<?
 				$APPLICATION->IncludeComponent(
 					"bitrix:main.include",
@@ -74,13 +71,9 @@ if ($isFilter || $isSidebar): ?>
 					array('HIDE_ICONS' => 'Y')
 				);
 				?>
-			</div>
 		<?endif?>
-	</div>
 <?endif?>
-<div class="<?=(($isFilter || $isSidebar) ? "col-md-9 col-sm-8 col-sm-pull-4 col-md-pull-3" : "col-xs-12")?>">
-	<div class="row">
-		<div class="col-xs-12">
+
 			<?
 			if (ModuleManager::isModuleInstalled("sale"))
 			{
@@ -200,12 +193,10 @@ if ($isFilter || $isSidebar): ?>
 				}
 			}
 			?>
-		</div>
-		<div class="col-xs-12">
 			<?
 			$APPLICATION->IncludeComponent(
 				"bitrix:catalog.section.list",
-				"",
+				"empty",
 				array(
 					"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 					"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -249,7 +240,7 @@ if ($isFilter || $isSidebar): ?>
 
 			$intSectionID = $APPLICATION->IncludeComponent(
 				"bitrix:catalog.section",
-				"",
+				"service",
 				array(
 					"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 					"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -376,7 +367,7 @@ if ($isFilter || $isSidebar): ?>
 				$component
 			);
 			?>
-		</div>
+
 		<?
 		$GLOBALS['CATALOG_CURRENT_SECTION_ID'] = $intSectionID;
 
@@ -512,5 +503,3 @@ if ($isFilter || $isSidebar): ?>
 			}
 		}
 		?>
-	</div>
-</div>

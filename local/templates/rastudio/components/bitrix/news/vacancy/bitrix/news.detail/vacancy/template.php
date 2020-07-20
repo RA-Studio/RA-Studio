@@ -51,7 +51,7 @@ $this->setFrameMode(true);
 	array(
 		"COMPONENT_TEMPLATE" => "uniform",
 		"FORM_ID" => "FORM8",
-		"FORM_NAME" => "Контактные данные",
+		"FORM_NAME" => "Откликнуться на вакансию",
 		"WIDTH_FORM" => "vacancy-form",
 		"DISPLAY_FIELDS" => array(
 			0 => "TITLE",

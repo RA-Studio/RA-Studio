@@ -13,6 +13,18 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
 	Options +FollowSymLinks
 	RewriteEngine On
+
+	RewriteBase /
+    RewriteCond %{HTTP_HOST} ^(www\.)?msk\.ra-studio\.ru$ [NC]
+    RewriteCond %{REQUEST_URI} !^/msk/
+    RewriteRule ^(.*)$ msk/$1 [L]
+    
+
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+    RewriteCond %{SERVER_PORT} !^443$
+    RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-l
 	RewriteCond %{REQUEST_FILENAME} !-d

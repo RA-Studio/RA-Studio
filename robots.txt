@@ -1,9 +1,4 @@
 User-Agent: *
-Allow: /bitrix/components/
-Allow: /bitrix/cache/
-Allow: /bitrix/js/
-Allow: /bitrix/templates/
-Allow: /bitrix/panel/
 Sitemap: https://ra-studio.ru/sitemap.xml
 Disallow: /*show_page_exec_time=
 Disallow: /*show_sql_stat=
@@ -35,18 +30,9 @@ Disallow: /*&bxajaxid=
 Disallow: /*?view_result=
 Disallow: /*&view_result=
 Disallow: /test.php
-Disallow: /about-us
-Disallow: /blog
-Disallow: /contextual-advertising
-Disallow: /development
 Disallow: /local
-Disallow: /php
-Disallow: /portfolio
-Disallow: /promotion
-Disallow: /reputation-management
-Disallow: /web-design
-Disallow: /cases
 Disallow: /project-board*
+Disallow: /msk
 
 User-Agent: Yandex
 Disallow: */index.php
@@ -82,15 +68,5 @@ Disallow: /*&bxajaxid=
 Disallow: /*?view_result=
 Disallow: /*&view_result=
 Disallow: /test.php
-Disallow: /about-us
-Disallow: /blog
-Disallow: /contextual-advertising
-Disallow: /development
 Disallow: /local
-Disallow: /php
-Disallow: /portfolio
-Disallow: /promotion
-Disallow: /reputation-management
-Disallow: /web-design
-Disallow: /cases
 Disallow: /project-board*
